@@ -77,6 +77,7 @@ a {
 
 .about {
   padding: 5px;
+  @include hyphens(auto);
 
   p:first-child {
     margin-top: 0px;
