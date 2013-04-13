@@ -106,11 +106,18 @@ a {
     }
 
     .wrapper {
-      margin: 10%;
+      position: absolute;
+      left: 50%;
+      margin-left: -(800px/2);
+      top: 10%;
       background: rgba(0,0,0,0.9);
       color: white;
       @include border-radius(4px);
       padding: 10px;
+      width: 800px;
+      height: 80%;
+      overflow: auto;
+      @include box-sizing(border-box);
     }
 
     a {
