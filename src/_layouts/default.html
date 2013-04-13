@@ -5,17 +5,16 @@
         <title>{{ page.title }}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-        <link href="feed.xml" rel="alternate" type="application/rss+xml">
+        <meta name="keywords" content="dev,css,css3,html,html5,api,javascript,js,zepto,jquery,backbone,nodejs,node,front-end,frontend,front">
+        <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/assets/css/style.css">
+        <link rel="shortcut icon" type="image/png" href="favicon.png" />
     </head>
     <body>
         {{ content }}
-        <script src="assets/js/script.js"></script>
-        {% if site.livereload %}
-        <script>document.write('<script async="" src=\"http://'
-        + (location.host || 'localhost').split(':')[0]
-        + ':35728/livereload.js?snipver=1\"><\/script>')
-        </script>
-        {% endif %}
+        <script src="{{site.baseurl}}/assets/js/script.js"></script>
+        {% if site.livereload %}<script>document.write('<script src="//'
+    + (location.host || 'localhost').split(':')[0]
+    + ':35729/livereload.js"></'
+    + 'script>')</script>{% endif %}
     </body>
 </html>

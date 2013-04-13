@@ -1,17 +1,77 @@
-// Uncomment if you want to use normalize.css. Do not forget to do: $ bower install normalize.scss
-//@import "../_components/normalize.scss/_normalize.scss";
-@import "_fontcustom";
+@import "compass";
+@import "../_components/normalize.scss/normalize.scss";
+@import "fonts";
 
-//@import "compass/css3"; // don't import all compass in one shot, (i said that for your perf)
+html,
+body {
+    font-family:"Museo Sans 500";
+    height: 100%;
+    width: 100%;
+    font-size: 1em;
+    color: #3D3D3E;
+}
 
-// Uncomment this if you use svg icon with fontcustom
-// @font-face {
-// 	font-family: "icons";
-// 	src: font-url("icons/icons.eot?#iefix") format("embedded-opentype"),
-// 		font-url("icons/icons.woff") format("woff"),
-// 		font-url("icons/icons.ttf") format("truetype"),
-// 		font-url("icons/icons.svg#fontcustom") format("svg");
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-// @import "icons";
+a {
+    color: inherit;
+}
+
+.main-title {
+  font-family: 'Futura PT Bold', sans-serif;
+  font-size: 60px;
+  color: #3D3D3E;
+  @include inline-block();
+  margin: 0;
+}
+
+%section {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  .title {
+    font-family: 'Futura PT Bold', sans-serif;
+    color: #FF5959;
+    border-bottom: 1px solid #EABFC8;
+    @include inline-block();
+    text-transform: uppercase;
+    font-style: normal;
+    margin: 0;
+  }
+
+  .wrapper {
+    padding: 5px;
+  }
+}
+
+.myself {
+  @extend %section;
+  background: white;
+  overflow: hidden;
+
+  .avatar {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      max-height: 40%;
+      max-width: 40%;
+    }
+
+    img {
+      @include inline-block();
+      vertical-align: middle;
+      @include border-radius(50%);
+    }
+  }
+}
+
+.about {
+  padding: 0 20px;
+}

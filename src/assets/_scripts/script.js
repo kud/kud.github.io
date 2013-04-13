@@ -1,1 +1,6 @@
-// Leave me or put some JavaScript here (jshint needs some content in the file or it will fail :)
+document.addEventListener('DOMContentLoaded', function () {
+    var email = document.getElementById('email');
+    email.href = ['mailto', ':', 'm', '@', 'kud', '.', 'io'].join('');
+
+    if(!window.location.hash) { window.location = "/#myself"; }
+});
