@@ -68,10 +68,10 @@ a {
       @include inline-block();
       vertical-align: middle;
       @include border-radius(50%);
+      overflow: hidden;
     }
   }
 }
 
 .about {
-  padding: 0 20px 20px;
 }
