@@ -1,6 +1,8 @@
-@import "compass";
+@import "compass/css3";
 @import "../_components/normalize.scss/normalize.scss";
 @import "fonts";
+@import "animation";
+@import "animate";
 
 html,
 body {
@@ -74,4 +76,61 @@ a {
 }
 
 .about {
+  p:first-child {
+    margin-top: 0px;
+  }
+
+  p:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+
+@media screen and (min-width: 1000px) {
+  .about {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+
+    &:target {
+      display: block;
+      @include animation(about 1s ease-in);
+    }
+
+    .wrapper {
+      margin: 10%;
+      background: rgba(0,0,0,0.9);
+      color: white;
+      @include border-radius(4px);
+      padding: 10px;
+    }
+
+    a {
+      @include transition(background 0.3s ease-in, color 0.3s ease-in);
+
+      &:hover {
+        text-decoration: none;
+        color: black;
+        background: white;
+        padding: 2px;
+        margin: 0 -2px;
+      }
+    }
+  }
+}
+
+@include keyframes(about) {
+  0% {
+    display: block;
+    opacity: 0;
+  }
+
+  100% {
+    display: block;
+    opacity: 1;
+  }
 }

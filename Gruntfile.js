@@ -237,6 +237,7 @@ module.exports = function(grunt) {
           imagesDir: '<%= happyPlan.src.assets.images %>',
           javascriptsDir: '<%= happyPlan.src.assets.scripts %>',
           fontsDir: '<%= happyPlan.src.assets.fonts %>',
+          require: ['animation', 'animate'],
 
           // here we give to compass dist path (without dist root)
           raw: [
@@ -258,6 +259,7 @@ module.exports = function(grunt) {
           imagesDir: '<%= happyPlan.src.assets.images %>',
           javascriptsDir: '<%= happyPlan.src.assets.scripts %>',
           fontsDir: '<%= happyPlan.src.assets.fonts %>',
+          require: ['animation', 'animate'],
 
           // here we give to compass dist path (without dist root)
           raw: [
