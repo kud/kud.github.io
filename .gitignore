@@ -1,7 +1,0 @@
-node_modules
-npm-debug.log
-.sass-cache
-dist
-build
-src/assets/_components/*
-!src/assets/_components/.empty

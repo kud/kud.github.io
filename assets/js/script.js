@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){var e=document.getElementById("email");e.href=["mailto",":","m","@","kud",".","io"].join("")});
