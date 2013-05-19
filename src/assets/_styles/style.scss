@@ -1,5 +1,5 @@
 @import "compass/css3";
-@import "../_components/normalize.scss/normalize.scss";
+@import "../_bower_components/normalize.scss/normalize.scss";
 @import "fonts";
 @import "animation";
 @import "animate";
@@ -13,152 +13,61 @@ body {
   color: #3D3D3E;
 }
 
+body {
+  position: relative;
+  overflow: hidden;
+}
+
 a {
     color: inherit;
 }
 
-.myself {
-  position: relative;
+.k-Header {
+  background: #151515;
+}
+
+.k-Header-head {
+  color: white;
+  font-family: 'Futura PT Bold', sans-serif;
+  margin: 0px;
+  padding: 0px 15px;
+  font-size: 3.2em;
+}
+
+.k-Intro {
   height: 100%;
   width: 100%;
-  background: white;
-  @include box-sizing(border-box);
-  padding: 5px;
+  display: table;
+}
 
-  .main-title {
-    font-family: 'Futura PT Bold', sans-serif;
-    font-size: 60px;
-    color: #3D3D3E;
-    @include inline-block();
-    margin: 0;
+.k-Intro-sentence {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+
+  p {
+    border-bottom: 3px solid white;
+    display: inline-block;
+    color: white;
+    font-size: 2.5em;
     position: relative;
-    z-index: 500;
+    line-height: 1.2em;
+    margin: auto;
+    background: black;
+    @include border-radius(4px);
     padding: 5px;
-    line-height: 60px;
-    background: rgba(255,255,255,0.7);
-  }
-
-  .avatar {
-    display: table;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    span {
-      display: table-cell;
-      vertical-align: middle;
-      text-align: center;
-      max-height: 40%;
-    }
-
-    img {
-      @include inline-block();
-      vertical-align: middle;
-      @include border-radius(50%);
-      overflow: hidden;
-    }
   }
 }
-
-.about {
-  padding: 5px;
-  @include hyphens(auto);
-
-  p:first-child {
-    margin-top: 0px;
-  }
-
-  p:last-child {
-    margin-bottom: 0px;
-  }
-}
-
 
 @media screen and (min-width: 1000px) {
-  .myself {
-      &:before {
-        position: absolute;
-        background: url(../img/background-2.jpg) no-repeat center center;
-        background-size: cover;
-        width: 100%;
-        height: 400px;
-        margin-top: -210px;
-        top: 50%;
-        left: 0;
-        content:'';
-        display: block;
-        border-top: 2px solid #3D3D3E;
-        border-bottom: 2px solid #3D3D3E;
-        opacity: 0.92;
-        @include animation(background 1s ease-in);
-      }
-  }
-
-  .about {
-    display: none;
-    position: absolute;
+  html,
+  body {
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    padding: 0;
-
-    &:target {
-      display: block;
-      @include animation(about 1s ease-in);
-    }
-
-    .wrapper {
-      position: absolute;
-      left: 50%;
-      margin-left: -(800px/2);
-      top: 10%;
-      background: rgba(0,0,0,0.9);
-      color: white;
-      @include border-radius(4px);
-      padding: 10px;
-      width: 800px;
-      height: 80%;
-      overflow: auto;
-      @include box-sizing(border-box);
-    }
-
-    a {
-      @include transition(background 0.3s ease-in, color 0.3s ease-in);
-
-      &:hover {
-        text-decoration: none;
-        color: black;
-        background: white;
-        padding: 2px;
-        margin: 0 -2px;
-      }
-    }
-  }
-}
-
-@include keyframes(about) {
-  0% {
-    display: block;
-    opacity: 0;
   }
 
-  100% {
-    display: block;
-    opacity: 1;
-  }
-}
-
-@include keyframes(background) {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    display: block;
-    opacity: 0.92;
+  body {
+    background: url("../img/background-3.jpg") no-repeat;
+    background-size: cover;
   }
 }
