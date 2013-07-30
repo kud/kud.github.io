@@ -1,5 +1,5 @@
 @import "compass/css3";
-@import "../_bower_components/normalize.scss/normalize.scss";
+@import "CSS:../../../bower_components/normalize-css/normalize";
 @import "fonts";
 @import "animation";
 @import "animate";
@@ -22,11 +22,11 @@ a {
     color: inherit;
 }
 
-.k-Header {
+.kud-Header {
   background: #151515;
 }
 
-.k-Header-head {
+.kud-Header-head {
   color: white;
   font-family: 'Futura PT Bold', sans-serif;
   margin: 0px;
@@ -34,13 +34,13 @@ a {
   font-size: 3.2em;
 }
 
-.k-Intro {
+.kud-Intro {
   height: 100%;
   width: 100%;
   display: table;
 }
 
-.k-Intro-sentence {
+.kud-Intro-sentence {
   text-align: center;
   display: table-cell;
   vertical-align: middle;

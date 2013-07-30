@@ -1,0 +1,9 @@
+{
+  "compass": {
+    "require": [
+      "sass-css-importer",
+      "animate",
+      "animation"
+    ]
+  }
+}

@@ -1,50 +1,11 @@
 {
-  "name": "_kud.profile",
-  "version": "0.3.0",
-  "description": "profile",
-  "author": "Erwann Mest",
-  "license": "BSD",
-  "dependencies": {
-    "bower": "~0.9.2",
-    "commander": "~1.1.1",
-    "matchdep": "~0.1.2",
-    "deepmerge": "~0.2.5",
-    "grunt": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.0",
-    "grunt-jekyll": "~0.3.3",
-    "grunt-contrib-copy": "0.4.0",
-    "grunt-contrib-concat": "~0.1.2",
-    "grunt-contrib-compass": "~0.1.2",
-    "grunt-contrib-uglify": "~0.1.1",
-    "grunt-contrib-imagemin": "~0.1.4",
-    "grunt-regarde": "0.1.1",
-    "grunt-contrib-livereload": "~0.1.1",
-    "grunt-contrib-jshint": "~0.2.0",
-    "grunt-webfont": "~0.1.4",
-    "grunt-shell": "~0.2.1",
-    "moment": "~2.0.0",
-    "grunt-contrib-connect": "~0.2.0",
-    "grunt-open": "~0.2.0",
-    "assemble": "~0.3.30",
-    "grunt-contrib-nodeunit": "~0.1.2"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/kud/happy-plan.git"
-  },
-  "keywords": [
-    "static",
-    "website",
-    "generator",
-    "jekyll",
-    "frontend",
-    "grunt",
-    "gh-pages",
-    "bower"
-  ],
-  "main": "Gruntfile.js",
+  "name": "kud_test",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "grunt test"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD"
 }
