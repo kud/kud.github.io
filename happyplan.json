@@ -5,5 +5,20 @@
       "animate",
       "animation"
     ]
+  },
+  "assets": {
+    "scripts": {
+      "<%= happyplan.dist.assets.scripts %>/script.js": [
+        "<%= happyplan.theme.local.assets.scripts %>/<%= happyplan.assets.main.script %>"
+      ]
+    }
+  },
+  "git": {
+    "branch": "master"
+  },
+  "theme": {
+    "default": {
+      "disable": true
+    }
   }
 }
