@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The icon can be used freely in both personal and commercial projects with no attribution required, but always appreciated. 
+You may NOT sub-license, resell, rent, redistribute or otherwise transfer the icon without express written permission from iconmonstr.com -->
+
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="512px" height="512px" viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+<path id="equalizer-icon" d="M311.3,61v40H200.6V61H311.3z M200.6,131v40h110.7v-40H200.6z M200.6,201v40h110.7v-40H200.6z
+	 M311.3,451v-40H200.6v40H311.3z M200.6,341v40h110.7v-40H200.6z M200.6,271v40h110.7v-40H200.6z M160.6,201H50v40h110.6V201z
+	 M351.3,381H462v-40H351.3V381z M351.3,311H462v-40H351.3V311z M160.6,271H50v40h110.6V271z M351.3,451H462v-40H351.3V451z
+	 M160.6,341H50v40h110.6V341z M160.6,411H50v40h110.6V411z"/>
+</svg>

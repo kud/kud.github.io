@@ -52,10 +52,40 @@ a {
 
 .kud-Header-head {
   color: white;
-  font-family: 'Futura PT Bold', sans-serif;
+  //font-family: 'Futura PT Bold', sans-serif;
+  font-family: 'Brothers Regular', sans-serif;
   margin: 0px;
   font-size: 2.8em;
   font-weight: normal;
+}
+
+.kud-Links {
+  li {
+    display: inline-block;
+
+    a {
+      background: #151515;
+      display: block;
+      width: 46px;
+      height: 46px;
+      position: relative;
+      @include border-radius(50%);
+
+      &:hover {
+        background: white;
+      }
+    }
+
+    img {
+      height: 32px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -16px;
+      margin-left: -16px;
+      display: block;
+    }
+  }
 }
 
 @media screen and (min-width: 1000px) {
