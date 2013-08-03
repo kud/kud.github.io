@@ -4,6 +4,7 @@
 @import "icons";
 @import "animation";
 @import "animate";
+@include animate-bounceIn;
 
 html,
 body {
@@ -53,6 +54,7 @@ a {
     margin-top: -45%;
     margin-left: -45%;
     content: '';
+    @include box-sizing(border-box);
   }
 
   &:hover {
@@ -207,5 +209,9 @@ and (min-width: 1024px) {
     .kud-Header-heading {
       font-size: 2em;
     }
+  }
+
+  .kud-About {
+    @include animation(bounceIn 0.5s 1);
   }
 }
