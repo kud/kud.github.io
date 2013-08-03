@@ -5,6 +5,8 @@
 @import "animation";
 @import "animate";
 @include animate-bounceIn;
+@include animate-fadeIn;
+@include animate-bounceInDown;
 
 html,
 body {
@@ -189,6 +191,14 @@ and (min-width: 1024px) {
   .kud-Links,
   .kud-About  {
     opacity: 0.9;
+  }
+
+  .kud-Header {
+    @include animation(bounceInDown 1s 1);
+  }
+
+  .kud-Links {
+    @include animation(fadeIn 1s 1);
   }
 
   .kud-Header--alternative {
