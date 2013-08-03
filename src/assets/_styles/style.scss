@@ -1,6 +1,7 @@
 @import "compass/css3";
 @import "CSS:../../../bower_components/normalize-css/normalize";
 @import "fonts";
+@import "icons";
 @import "animation";
 @import "animate";
 
@@ -16,6 +17,7 @@ body {
 body {
   position: relative;
   overflow: hidden;
+  background: url("../img/irongrip.png");
 }
 
 a {
@@ -23,17 +25,21 @@ a {
 }
 
 .kud-Header {
-  background: #151515;
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -(180px / 2);
+  margin-left: -(180px / 2);
+  background: #151515;
   height: 180px;
   width: 180px;
   line-height: 180px;
-  margin-top: -(180px / 2);
-  margin-left: -(180px / 2);
-  text-align: center;
   @include border-radius(50%);
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
 
   &:before {
     display: block;
@@ -48,10 +54,22 @@ a {
     margin-left: -45%;
     content: '';
   }
+
+  &:hover {
+    background: white;
+    color: #151515;
+
+    &:before {
+      border: 1px dashed #151515;
+    }
+  }
 }
 
-.kud-Header-head {
-  color: white;
+.kud-Header--alternative {
+  display: none;
+}
+
+.kud-Header-heading {
   //font-family: 'Futura PT Bold', sans-serif;
   font-family: 'Brothers Regular', sans-serif;
   margin: 0px;
@@ -60,8 +78,22 @@ a {
 }
 
 .kud-Links {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  ul {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+  }
+
   li {
     display: inline-block;
+    margin-right: 5px;
 
     a {
       background: #151515;
@@ -70,22 +102,34 @@ a {
       height: 46px;
       position: relative;
       @include border-radius(50%);
+      font-size: 28px;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      line-height: 45px;
+      transition: all 0.3s ease;
+
+      span {
+        display: none;
+      }
 
       &:hover {
         background: white;
+        color: #151515;
       }
     }
-
-    img {
-      height: 32px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -16px;
-      margin-left: -16px;
-      display: block;
-    }
   }
+}
+
+.kud-About {
+  background: #151515;
+  margin: 10px;
+  color: white;
+  padding: 10px;
+}
+
+.kud-About--hidden {
+  display: none;
 }
 
 @media screen and (min-width: 1000px) {
@@ -96,7 +140,7 @@ a {
   }
 
   body {
-    background: url("../img/background-3.jpg") no-repeat;
+    background: url("../img/background-3.jpg") 50% 50% no-repeat;
     background-size: cover;
   }
 }
