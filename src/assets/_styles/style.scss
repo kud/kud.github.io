@@ -123,9 +123,24 @@ a {
 
 .kud-About {
   background: #151515;
-  margin: 10px;
   color: white;
   padding: 10px;
+  font-family: 'Haymaker', sans-serif;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 340px;
+  height: 340px;
+  font-size: 50px;
+  margin-top: -(360px /2);
+  margin-left: -(360px /2);
+
+  p {
+    margin: 0;
+    margin-top: 80px
+  }
 }
 
 .kud-About--hidden {
@@ -142,5 +157,31 @@ a {
   body {
     background: url("../img/background-3.jpg") 50% 50% no-repeat;
     background-size: cover;
+  }
+
+  .kud-Header,
+  .kud-Links,
+  .kud-About  {
+    opacity: 0.9;
+  }
+
+  .kud-Header--alternative {
+    display: block;
+    top: 5px;
+    left: 5px;
+    margin: 0px;
+    background: white;
+    color: #151515;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+
+    &:before {
+      border: 1px dashed #151515;
+    }
+
+    .kud-Header-heading {
+      font-size: 2em;
+    }
   }
 }
