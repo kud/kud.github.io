@@ -443,6 +443,11 @@ table {
 }
 
 @font-face {
+  font-family: "Haymaker";
+  src: url("../fonts/haymaker.ttf") format("opentype");
+}
+
+@font-face {
   font-family: "icons";
   src: url("../fonts/icons.eot");
   src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg?#webfont") format("svg");
@@ -538,21 +543,25 @@ a {
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000327}}
 .kud-Header {
-  background: #151515;
   position: absolute;
   top: 50%;
   left: 50%;
+  margin-top: -90px;
+  margin-left: -90px;
+  background: #151515;
   height: 180px;
   width: 180px;
   line-height: 180px;
-  margin-top: -90px;
-  margin-left: -90px;
-  text-align: center;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000344}}
 .kud-Header:before {
   display: block;
   position: absolute;
@@ -568,17 +577,30 @@ a {
   margin-left: -45%;
   content: '';
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000358}}
+.kud-Header:hover {
+  background: white;
+  color: #151515;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000362}}
+.kud-Header:hover:before {
+  border: 1px dashed #151515;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000355}}
-.kud-Header-head {
-  color: white;
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000368}}
+.kud-Header--alternative {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000372}}
+.kud-Header-heading {
   font-family: 'Brothers Regular', sans-serif;
   margin: 0px;
   font-size: 2.8em;
   font-weight: normal;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000380}}
 .kud-Links {
   position: absolute;
   bottom: 5%;
@@ -586,19 +608,19 @@ a {
   right: 0;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000387}}
 .kud-Links ul {
   display: inline-block;
   padding: 0;
   margin: 0;
   margin-left: -5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000378}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000394}}
 .kud-Links li {
   display: inline-block;
   margin-right: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000398}}
 .kud-Links li a {
   background: #151515;
   display: block;
@@ -615,27 +637,83 @@ a {
   line-height: 45px;
   transition: all 0.3s ease;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\0000396}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003112}}
 .kud-Links li a span {
   display: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003100}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003116}}
 .kud-Links li a:hover {
   background: white;
   color: #151515;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003124}}
+.kud-About {
+  background: #151515;
+  color: white;
+  padding: 10px;
+  font-family: 'Haymaker', sans-serif;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  width: 340px;
+  height: 340px;
+  font-size: 50px;
+  margin-top: -180px;
+  margin-left: -180px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003140}}
+.kud-About p {
+  margin: 0;
+  margin-top: 80px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003146}}
+.kud-About--hidden {
+  display: none;
+}
+
 @media screen and (min-width: 1000px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003110}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003152}}
   html,
   body {
     width: 100%;
     height: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003115}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003157}}
   body {
     background: url("../img/background-3.jpg") 50% 50% no-repeat;
     background-size: cover;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003164}}
+  .kud-Header,
+  .kud-Links,
+  .kud-About {
+    opacity: 0.9;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003168}}
+  .kud-Header--alternative {
+    display: block;
+    top: 5px;
+    left: 5px;
+    margin: 0px;
+    background: white;
+    color: #151515;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003179}}
+  .kud-Header--alternative:before {
+    border: 1px dashed #151515;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003183}}
+  .kud-Header--alternative .kud-Header-heading {
+    font-size: 2em;
   }
 }
