@@ -126,20 +126,17 @@ a {
   color: white;
   padding: 10px;
   font-family: 'Haymaker', sans-serif;
-  display: inline-block;
+  display: block;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 0;
+  margin-top: -64px;
   text-align: center;
-  width: 340px;
-  height: 340px;
-  font-size: 50px;
-  margin-top: -(360px /2);
-  margin-left: -(360px /2);
+
+  font-size: 28px;
 
   p {
     margin: 0;
-    margin-top: 80px
   }
 }
 
@@ -147,7 +144,34 @@ a {
   display: none;
 }
 
-@media screen and (min-width: 1000px) {
+@media only screen
+and (max-width: 568px)
+and (orientation: landscape) {
+  .kud-Header {
+    top: 5%;
+    margin-top: 0px
+  }
+}
+
+@media only screen
+and (min-width: 600px) {
+  .kud-About {
+    width: 340px;
+    height: 340px;
+    font-size: 50px;
+    margin-top: -(360px /2);
+    margin-left: -(360px /2);
+    left: 50%;
+
+    p {
+      margin: 0;
+      margin-top: 80px
+    }
+  }
+}
+
+@media only screen
+and (min-width: 1024px) {
   html,
   body {
     width: 100%;
