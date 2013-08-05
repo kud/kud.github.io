@@ -924,29 +924,30 @@ a {
   position: absolute;
   top: 50%;
   left: 0;
+  right: 0;
   margin-top: -64px;
   text-align: center;
   font-size: 28px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003142}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003143}}
 .kud-About p {
   margin: 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003147}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003148}}
 .kud-About--hidden {
   display: none;
 }
 
 @media only screen and (max-width: 568px) and (orientation: landscape) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003154}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003155}}
   .kud-Header {
     top: 5%;
     margin-top: 0px;
   }
 }
-@media only screen and (min-width: 600px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003162}}
+@media only screen and (min-width: 600px) and (min-height: 600px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003164}}
   .kud-About {
     width: 340px;
     height: 340px;
@@ -954,35 +955,36 @@ a {
     margin-top: -180px;
     margin-left: -180px;
     left: 50%;
+    right: auto;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003170}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003173}}
   .kud-About p {
     margin: 0;
     margin-top: 80px;
   }
 }
 @media only screen and (min-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003180}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003183}}
   html,
   body {
     width: 100%;
     height: 100%;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003185}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003188}}
   body {
     background: url("../img/background-3.jpg") 50% 50% no-repeat;
     background-size: cover;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003192}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003195}}
   .kud-Header,
   .kud-Links,
   .kud-About {
     opacity: 0.9;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003196}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003199}}
   .kud-Header {
     -webkit-animation: bounceInDown 1s 1;
     -moz-animation: bounceInDown 1s 1;
@@ -990,7 +992,7 @@ a {
     animation: bounceInDown 1s 1;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003200}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003203}}
   .kud-Links {
     -webkit-animation: fadeIn 1s 1;
     -moz-animation: fadeIn 1s 1;
@@ -998,7 +1000,7 @@ a {
     animation: fadeIn 1s 1;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003204}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003207}}
   .kud-Header--alternative {
     display: block;
     top: 5px;
@@ -1010,16 +1012,16 @@ a {
     width: 100px;
     height: 100px;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003215}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003218}}
   .kud-Header--alternative:before {
     border: 1px dashed #151515;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003219}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003222}}
   .kud-Header--alternative .kud-Header-heading {
     font-size: 2em;
   }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003224}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/media\/sf_D_DRIVE\/Sites\/_kud\/kud\.github\.io\/build\/assets\/_css\/style\.scss}line{font-family:\00003227}}
   .kud-About {
     -webkit-animation: bounceIn 0.5s 1;
     -moz-animation: bounceIn 0.5s 1;

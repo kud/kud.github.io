@@ -1,4 +1,4 @@
-/*! _kud.profile - v1.0.0 - 2013-08-03 */
+/*! _kud.profile - v1.0.0 - 2013-08-05 */
 document.addEventListener('DOMContentLoaded', function () {
     var email = document.getElementById('kud-Email');
     email.href = ['mailto', ':', 'm', '@', 'kud', '.', 'io'].join('');
