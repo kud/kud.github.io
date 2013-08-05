@@ -134,6 +134,7 @@ a {
   position: absolute;
   top: 50%;
   left: 0;
+  right: 0;
   margin-top: -64px;
   text-align: center;
 
@@ -158,7 +159,8 @@ and (orientation: landscape) {
 }
 
 @media only screen
-and (min-width: 600px) {
+and (min-width: 600px)
+and (min-height: 600px) {
   .kud-About {
     width: 340px;
     height: 340px;
@@ -166,6 +168,7 @@ and (min-width: 600px) {
     margin-top: -(360px /2);
     margin-left: -(360px /2);
     left: 50%;
+    right: auto;
 
     p {
       margin: 0;
