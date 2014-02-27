@@ -1,10 +1,10 @@
 {
-  "name": "kud_test",
-  "version": "0.0.0",
+  "name": "_kud.profile",
+  "version": "1.0.0",
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
+    "bower-components",
     "test",
     "tests"
   ],
