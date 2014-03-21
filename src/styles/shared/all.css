@@ -1,0 +1,510 @@
+@-moz-keyframes bounceIn {
+
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+
+
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+  }
+
+
+  70% {
+    -moz-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+
+
+  100% {
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes bounceIn {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+  }
+
+
+  70% {
+    -webkit-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@-o-keyframes bounceIn {
+
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.3, 0.3);
+    transform: scale(0.3, 0.3);
+  }
+
+
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+  }
+
+
+  70% {
+    -o-transform: scale(0.9, 0.9);
+    transform: scale(0.9, 0.9);
+  }
+
+
+  100% {
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes bounceIn {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+
+  70% {
+    transform: scale(0.9, 0.9);
+  }
+
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@-moz-keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes bounceInDown {
+
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+
+  80% {
+    -moz-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+
+  100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes bounceInDown {
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@-o-keyframes bounceInDown {
+
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+    transform: translateY(-2000px);
+  }
+
+
+  60% {
+    opacity: 1;
+    -o-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+
+
+  80% {
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+
+  100% {
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceInDown {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+html,
+body {
+  font-family: "Museo Sans 500";
+  height: 100%;
+  width: 100%;
+  font-size: 1em;
+  color: #3D3D3E;
+}
+
+
+body {
+  position: relative;
+  overflow: hidden;
+  background: url("../images/wallpaper-mobile.png");
+}
+
+
+a {
+  color: inherit;
+}
+
+
+.kud-Header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;
+  margin-left: -90px;
+  background: #151515;
+  height: 180px;
+  width: 180px;
+  line-height: 180px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.kud-Header:before {
+  display: block;
+  position: absolute;
+  border: 1px dashed white;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  margin-top: -45%;
+  margin-left: -45%;
+  content: '';
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.kud-Header:hover {
+  background: white;
+  color: #151515;
+}
+
+.kud-Header:hover:before {
+  border: 1px dashed #151515;
+}
+
+
+.kud-Header--alternative {
+  display: none;
+}
+
+
+.kud-Header-heading {
+  font-family: 'Brothers Regular', sans-serif;
+  margin: 0px;
+  font-size: 2.8em;
+  font-weight: normal;
+}
+
+
+.kud-Links {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.kud-Links ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+}
+
+.kud-Links li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.kud-Links li a {
+  background: #151515;
+  display: block;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.3s ease;
+}
+
+.kud-Links li a span {
+  display: none;
+}
+
+.kud-Links li a:hover {
+  background: white;
+  color: #151515;
+}
+
+
+.kud-About {
+  background: #151515;
+  color: white;
+  padding: 10px;
+  font-family: 'Haymaker', sans-serif;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -64px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.kud-About p {
+  margin: 0;
+}
+
+
+.kud-About--hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+
+  .kud-Header {
+    top: 5%;
+    margin-top: 0px;
+  }
+}
+@media only screen and (min-width: 600px) and (min-height: 600px) {
+
+  .kud-About {
+    width: 340px;
+    height: 340px;
+    font-size: 50px;
+    margin-top: -180px;
+    margin-left: -180px;
+    left: 50%;
+    right: auto;
+  }
+
+  .kud-About p {
+    margin: 0;
+    margin-top: 80px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  body {
+    background: url("../images/wallpaper-3.jpg") 50% 50% no-repeat;
+    background-size: cover;
+  }
+
+
+  .kud-Header,
+  .kud-Links,
+  .kud-About {
+    opacity: 0.9;
+  }
+
+
+  .kud-Header {
+    -webkit-animation: bounceInDown 1s 1;
+    -moz-animation: bounceInDown 1s 1;
+    -o-animation: bounceInDown 1s 1;
+    animation: bounceInDown 1s 1;
+  }
+
+
+  .kud-Links {
+    -webkit-animation: fadeIn 1s 1;
+    -moz-animation: fadeIn 1s 1;
+    -o-animation: fadeIn 1s 1;
+    animation: fadeIn 1s 1;
+  }
+
+
+  .kud-Header--alternative {
+    display: block;
+    top: 5px;
+    left: 5px;
+    margin: 0px;
+    background: white;
+    color: #151515;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .kud-Header--alternative:before {
+    border: 1px dashed #151515;
+  }
+
+  .kud-Header--alternative .kud-Header-heading {
+    font-size: 2em;
+  }
+
+
+  .kud-About {
+    -webkit-animation: bounceIn 0.5s 1;
+    -moz-animation: bounceIn 0.5s 1;
+    -o-animation: bounceIn 0.5s 1;
+    animation: bounceIn 0.5s 1;
+  }
+}
