@@ -1,21 +1,47 @@
+help:
+	@ echo ''
+	@ echo 'Welcome to _kud.profile.'
+	@ echo ''
+	@ echo 'Usage:'
+	@ echo ''
+	@ echo '  make <command>'
+	@ echo ''
+	@ echo 'Commands:'
+	@ echo ''
+	@ echo '  make install    Install environment'
+	@ echo '  make update     Update environment'
+	@ echo '  make watch      Watch and compile'
+	@ echo '  make server     HTTP server'
+	@ echo '  make compile    Compile'
+	@ echo '  make deploy     Deploy on `master` branch'
+	@ echo ''
+
 install:
-	npm install gulp grunt-cli -g
-	npm install
-	bower install
+	@ echo "❯ Installing..."
+	@ npm install gulp grunt-cli -g
+	@ npm install
+	@ bower install
 
 update:
-	npm update
-	bower update
+	@ echo "❯ Updating..."
+	@ npm update
+	@ bower update
 
 watch:
-	gulp
+	@ echo "❯ Watching..."
+	@ gulp
 
 server:
-	cd dist && bloodyserver
+	@ echo "❯ Creating a server..."
+	@ cd dist && bloodyserver
 
 compile:
-	gulp dev
+	@ echo "❯ Compiling..."
+	@ gulp dev
 
 deploy:
-	make compile
-	grunt gh-pages
+	@ echo "❯ Deploying..."
+	@ echo "❯❯ Compiling..."
+	@ gulp dev
+	@ echo "❯❯ Uploading..."
+	@ grunt gh-pages
