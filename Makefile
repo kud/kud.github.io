@@ -10,7 +10,7 @@ help:
 	@ echo ''
 	@ echo '  make install    Install environment'
 	@ echo '  make update     Update environment'
-	@ echo '  make watch      Watch and compile'
+	@ echo '  make watch      Compile and watch'
 	@ echo '  make server     HTTP server'
 	@ echo '  make compile    Compile'
 	@ echo '  make deploy     Deploy on `master` branch'
