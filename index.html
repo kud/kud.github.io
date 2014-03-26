@@ -9,17 +9,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel="stylesheet" type="text/css">
     <link href="/styles/main.css" rel="stylesheet" type="text/css">
+    <script type= "text/javascript">
+      if ( screen.width <= 481 ) document.location = "/mobile.html"
+    </script>
   </head>
   <body>
+
     <a href="#" id="kud-AboutLink" class="kud-Header">
       <h1 class="kud-Header-heading">kud</h1>
     </a>
 
-    <section class="kud-About kud-About--hidden" id="kud-About">
+    <div class="kud-About kud-About--hidden" id="kud-About">
       <p>Fullstack JavaScript Developer</p>
-    </section>
+    </div>
 
-    <section class="kud-Links">
+    <div class="kud-Links">
       <ul>
         <li>
           <a href="http://life.kud.io/" class="icon icon-pencil"><span>Blog</span></a>
@@ -49,7 +53,9 @@
           <a href="#" target="_blank" id="kud-Email" class="icon icon-email"><span>Email</span></a>
         </li>
       </ul>
-    </section>
+    </div>
+
+
 
     <!--
     <section class="kud-About kud-About--hidden" id="kud-About">
@@ -83,5 +89,8 @@
       ga('send', 'pageview');
 
     </script>
+
+    <script src="http://localhost:35729/livereload.js" defer async></script>
+
   </body>
 </html>
