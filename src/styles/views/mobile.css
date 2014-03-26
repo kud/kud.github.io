@@ -3,17 +3,14 @@ body {
   font-family: "Museo Sans 500";
   height: 100%;
   width: 100%;
-  font-size: 1em;
   color: #3D3D3E;
 }
-
 
 body {
   position: relative;
   overflow: hidden;
   background: url("../images/wallpaper-mobile.png");
 }
-
 
 a {
   color: inherit;
@@ -23,12 +20,13 @@ a {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin-top: -90px;
-  margin-left: -90px;
+  transform: translate(-50%, -50%);
+  /*margin-top: -5.625rem;
+  margin-left: -5.625rem;*/
   background: #151515;
-  height: 180px;
-  width: 180px;
-  line-height: 180px;
+  height: 11.25rem;
+  width: 11.25rem;
+  line-height: 11.25rem;
   border-radius: 50%;
   text-align: center;
   display: block;
@@ -67,7 +65,7 @@ a {
 
 .kud-Header-heading {
   font-family: 'Brothers Regular', sans-serif;
-  margin: 0px;
+  margin: 0;
   font-size: 2.8em;
   font-weight: normal;
 }
@@ -85,26 +83,27 @@ a {
   display: inline-block;
   padding: 0;
   margin: 0;
-  margin-left: -5px;
+  margin-left: -.3125rem;
 }
 
 .kud-Links li {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: .3125rem;
+  margin-bottom: .2rem;
 }
 
 .kud-Links li a {
   background: #151515;
   display: block;
-  width: 46px;
-  height: 46px;
+  width: 2.875rem;
+  height: 2.875rem;
   position: relative;
   border-radius: 50%;
-  font-size: 28px;
+  font-size: 1.75rem;
   color: white;
   text-decoration: none;
   text-align: center;
-  line-height: 45px;
+  line-height: 2.8125rem;
   transition: all 0.3s ease;
 }
 
@@ -120,20 +119,22 @@ a {
 .kud-About {
   background: #151515;
   color: white;
-  padding: 10px;
+  padding: .625rem;
+  padding-bottom: 0.3rem;
   font-family: 'Haymaker', sans-serif;
   display: block;
   position: absolute;
   top: 50%;
   left: 0;
   right: 0;
-  margin-top: -64px;
+  transform: translate(0, -50%);
   text-align: center;
-  font-size: 28px;
+  font-size: 1.75rem;
 }
 
 .kud-About p {
   margin: 0;
+  padding: 0;
 }
 
 .kud-About--hidden {
@@ -144,26 +145,30 @@ a {
 
   .kud-Header {
     top: 5%;
-    margin-top: 0px;
+    transform: translate(-50%, 0);
+  }
+
+  .kud-About {
+    top: 30%;
+    transform: translate(0, -50%);
   }
 
 }
 
-/*@media only screen and (min-width: 600px) and (min-height: 600px) {
+@media only screen and (min-width: 600px) and (min-height: 600px) {
 
   .kud-About {
-    width: 340px;
-    height: 340px;
-    font-size: 50px;
-    margin-top: -180px;
-    margin-left: -180px;
+    width: 21.25rem;
+    height: 21.25rem;
+    font-size: 3.125rem;
+    transform: translate(-50%, -50%);
     left: 50%;
     right: auto;
   }
 
   .kud-About p {
     margin: 0;
-    margin-top: 80px;
+    margin-top: 6.5rem;
   }
 
-}*/
+}

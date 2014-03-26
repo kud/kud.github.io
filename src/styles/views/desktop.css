@@ -207,7 +207,14 @@ a {
 }
 
 .kud-About p {
-  margin-top: 80px;
+  margin: 0;
+  padding: 0;
+  margin-top: 6.5rem;
+}
+
+.kud-About p span {
+  cursor: pointer;
+  display: inline;
 }
 
 

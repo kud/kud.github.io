@@ -3,3 +3,10 @@
 *:after {
   box-sizing: border-box;
 }
+
+a,
+a:hover,
+a:active,
+a:focus {
+  outline: 0;
+}
