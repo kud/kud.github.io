@@ -74,7 +74,10 @@ a {
 .kud-Intro {
   position: relative;
   overflow: hidden;
-  background: url("../images/wallpaper-3.jpg") 50% 50% no-repeat;
+  background-color: #F5F5F5;
+  background-image: url("../images/wallpaper-3.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   height: 100%;

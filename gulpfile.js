@@ -15,9 +15,9 @@ var concat = require('gulp-concat')
   , livereload = require('gulp-livereload')
   , iconfont = require('gulp-iconfont')
   , iconfontCss = require('gulp-iconfont-css')
-  , handlebars = require('gulp-handlebars')
   , declare = require('gulp-declare')
   , replace = require('gulp-replace')
+  , imagemin = require('gulp-imagemin')
 
 // rework
 var reworkPlugins = {
@@ -109,6 +109,7 @@ gulp.task('styles:mobile', function() {
 // optimise image
 gulp.task('images', function() {
  return gulp.src('src/images/**/*')
+    .pipe( imagemin() )
     .pipe( gulp.dest('dist/images') )
     .pipe( livereload( server ) )
 })
