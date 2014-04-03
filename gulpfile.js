@@ -15,9 +15,9 @@ var concat = require('gulp-concat')
   , livereload = require('gulp-livereload')
   , iconfont = require('gulp-iconfont')
   , iconfontCss = require('gulp-iconfont-css')
-  , handlebars = require('gulp-handlebars')
   , declare = require('gulp-declare')
   , replace = require('gulp-replace')
+  , imagemin = require('gulp-imagemin')
 
 // rework
 var reworkPlugins = {
@@ -42,10 +42,18 @@ gulp.task('assets', function() {
 })
 
 // scripts
-gulp.task('scripts', ['jshint'], function() {
-  return gulp.src('src/scripts/app.js')
+gulp.task('scripts:desktop', function() {
+  return gulp.src('src/scripts/desktop.js')
     .pipe( plumber() )
     .pipe( concat('main.js', { newLine: ';' } ) )
+    .pipe( gulp.dest('dist/scripts/') )
+    .pipe( livereload( server ) )
+})
+
+gulp.task('scripts:mobile', function() {
+  return gulp.src('src/scripts/mobile.js')
+    .pipe( plumber() )
+    .pipe( concat('main-mobile.js', { newLine: ';' } ) )
     .pipe( gulp.dest('dist/scripts/') )
     .pipe( livereload( server ) )
 })
@@ -59,10 +67,10 @@ gulp.task('jshint', function() {
 })
 
 // styles
-gulp.task('styles', ['glyphicons'], function() {
+gulp.task('styles:desktop', function() {
   return streamqueue({ objectMode: true },
       gulp.src('bower-components/normalize-css/normalize.css'),
-      gulp.src('src/styles/import.css')
+      gulp.src('src/styles/import-desktop.css')
         .pipe( plumber() )
         .pipe( rework(
           reworkPlugins.importer({ path: 'src/styles/' }),
@@ -78,9 +86,30 @@ gulp.task('styles', ['glyphicons'], function() {
     .pipe( livereload( server ) )
 })
 
+gulp.task('styles:mobile', function() {
+  return streamqueue({ objectMode: true },
+      gulp.src('bower-components/normalize-css/normalize.css'),
+      gulp.src('src/styles/import-mobile.css')
+        .pipe( plumber() )
+        .pipe( rework(
+          reworkPlugins.importer({ path: 'src/styles/' }),
+          reworkPlugins.parent,
+          {
+            sourcemap: true
+          }
+        ) )
+        .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
+    )
+    .pipe( concat('main-mobile.css') )
+    .pipe( gulp.dest('dist/styles/') )
+    .pipe( livereload( server ) )
+})
+
+
 // optimise image
 gulp.task('images', function() {
  return gulp.src('src/images/**/*')
+    .pipe( imagemin() )
     .pipe( gulp.dest('dist/images') )
     .pipe( livereload( server ) )
 })
@@ -99,14 +128,6 @@ gulp.task('glyphicons', function() {
     .pipe( gulp.dest('src/assets/fonts') )
 })
 
-// notifier
-gulp.task('notify', function () {
-  return notifier.notify({
-    title: 'Mobile',
-    message: 'App built!'
-  })
-})
-
 // watch
 gulp.task('watch', function () {
 
@@ -117,8 +138,8 @@ gulp.task('watch', function () {
     }
 
     gulp.watch( [ 'src/assets/**/*' ], ['assets'] )
-    gulp.watch( [ 'src/scripts/**/*' ], ['scripts'] )
-    gulp.watch( [ 'src/styles/**/*' ], ['styles'] )
+    gulp.watch( [ 'src/scripts/**/*' ], ['jshint', 'scripts:desktop', 'scripts:mobile'] )
+    gulp.watch( [ 'src/styles/**/*' ], ['styles:desktop', 'styles:mobile'] )
     gulp.watch( [ 'src/images/**/*' ], ['images'] )
   })
 
@@ -129,7 +150,7 @@ gulp.task('watch', function () {
  */
 
 gulp.task('dev', ['clean'], function() {
-  gulp.start('assets', 'styles', 'scripts', 'images')
+  gulp.start('assets', 'glyphicons', 'styles:desktop', 'styles:mobile', 'jshint', 'scripts:desktop', 'scripts:mobile', 'images')
 })
 
 gulp.task('default', ['dev'], function() {

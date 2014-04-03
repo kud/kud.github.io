@@ -1,0 +1,289 @@
+@keyframes bounceIn {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.3, 0.3);
+  }
+
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05, 1.05);
+  }
+
+
+  70% {
+    transform: scale(0.9, 0.9);
+  }
+
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fadeIn {
+
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounceInDown {
+
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+
+
+  80% {
+    transform: translateY(-10px);
+  }
+
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+html,
+body {
+  font-family: "Museo Sans 500";
+  height: 100%;
+  width: 100%;
+  color: #3D3D3E;
+}
+
+a {
+  color: inherit;
+}
+
+.kud-Intro {
+  position: relative;
+  overflow: hidden;
+  background-color: #F5F5F5;
+  background-image: url("../images/wallpaper-3.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+
+.kud-IntroHeader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;
+  margin-left: -90px;
+  background: #151515;
+  height: 180px;
+  width: 180px;
+  line-height: 180px;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  color: white;
+  animation: bounceInDown 1s 1;
+}
+
+.kud-IntroHeader:before {
+  display: block;
+  position: absolute;
+  border: 1px dashed white;
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  margin-top: -45%;
+  margin-left: -45%;
+  content: '';
+  box-sizing: border-box;
+}
+
+.kud-IntroHeader:hover {
+  background: white;
+  color: #151515;
+}
+
+.kud-IntroHeader:hover:before {
+  border: 1px dashed #151515;
+}
+
+
+.kud-IntroHeader--alternative {
+  display: none;
+}
+
+
+.kud-IntroHeader-heading {
+  font-family: 'Brothers Regular', sans-serif;
+  margin: 0px;
+  font-size: 2.8em;
+  font-weight: normal;
+}
+
+
+.kud-IntroAbout {
+  background: #151515;
+  color: white;
+  padding: 10px;
+  font-family: 'Haymaker', sans-serif;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -64px;
+  text-align: center;
+  font-size: 28px;
+
+  width: 340px;
+  height: 340px;
+  font-size: 50px;
+  margin-top: -180px;
+  margin-left: -180px;
+  left: 50%;
+  right: auto;
+  animation: bounceIn 0.5s 1;
+}
+
+.kud-IntroAbout p {
+  margin: 0;
+  padding: 0;
+  margin-top: 6.5rem;
+}
+
+.kud-IntroAbout p span {
+  cursor: pointer;
+  display: inline;
+}
+
+
+.kud-IntroAbout--hidden {
+  display: none;
+}
+
+.kud-IntroHeader,
+.kud-IntroAbout {
+  opacity: 0.9;
+}
+
+.kud-IntroHeader--alternative {
+  /*display: block;*/
+  display: none;
+  top: 5px;
+  left: 5px;
+  margin: 0px;
+  background: white;
+  color: #151515;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+}
+
+.kud-IntroHeader--alternative:before {
+  border: 1px dashed #151515;
+}
+
+.kud-IntroHeader--alternative .kud-IntroHeader-heading {
+  font-size: 2em;
+}
+
+.kud-About {
+  min-height: 100%;
+  color: #999999;
+  font-family: 'Lusitana', serif;
+  font-size: 1.1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  hyphens: auto;
+}
+
+.kud-About-wrapper {
+  max-width: 550px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.kud-About-avatar {
+  width: 8.75rem;
+  height: 8.75rem;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #FFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+}
+
+
+.kud-About-heading {
+  color: #2E2E2E;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.kud-AboutLinks {
+  margin-top: 5rem;
+  text-align: center;
+  animation: fadeIn 1s 1;
+}
+
+& ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+}
+
+& li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+& li a {
+  background: #151515;
+  display: block;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.4s ease;
+  border: 1px solid black;
+}
+
+& li a span {
+  display: none;
+}
+
+& li a:hover {
+  background: white;
+  color: #151515;
+}
