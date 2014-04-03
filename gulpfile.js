@@ -42,10 +42,18 @@ gulp.task('assets', function() {
 })
 
 // scripts
-gulp.task('scripts', ['jshint'], function() {
-  return gulp.src('src/scripts/app.js')
+gulp.task('scripts:desktop', function() {
+  return gulp.src('src/scripts/desktop.js')
     .pipe( plumber() )
     .pipe( concat('main.js', { newLine: ';' } ) )
+    .pipe( gulp.dest('dist/scripts/') )
+    .pipe( livereload( server ) )
+})
+
+gulp.task('scripts:mobile', function() {
+  return gulp.src('src/scripts/mobile.js')
+    .pipe( plumber() )
+    .pipe( concat('main-mobile.js', { newLine: ';' } ) )
     .pipe( gulp.dest('dist/scripts/') )
     .pipe( livereload( server ) )
 })
@@ -119,14 +127,6 @@ gulp.task('glyphicons', function() {
     .pipe( gulp.dest('src/assets/fonts') )
 })
 
-// notifier
-gulp.task('notify', function () {
-  return notifier.notify({
-    title: 'Mobile',
-    message: 'App built!'
-  })
-})
-
 // watch
 gulp.task('watch', function () {
 
@@ -137,7 +137,7 @@ gulp.task('watch', function () {
     }
 
     gulp.watch( [ 'src/assets/**/*' ], ['assets'] )
-    gulp.watch( [ 'src/scripts/**/*' ], ['scripts'] )
+    gulp.watch( [ 'src/scripts/**/*' ], ['jshint', 'scripts:desktop', 'scripts:mobile'] )
     gulp.watch( [ 'src/styles/**/*' ], ['styles:desktop', 'styles:mobile'] )
     gulp.watch( [ 'src/images/**/*' ], ['images'] )
   })
@@ -149,7 +149,7 @@ gulp.task('watch', function () {
  */
 
 gulp.task('dev', ['clean'], function() {
-  gulp.start('assets', 'glyphicons', 'styles:desktop', 'styles:mobile', 'scripts', 'images')
+  gulp.start('assets', 'glyphicons', 'styles:desktop', 'styles:mobile', 'jshint', 'scripts:desktop', 'scripts:mobile', 'images')
 })
 
 gulp.task('default', ['dev'], function() {

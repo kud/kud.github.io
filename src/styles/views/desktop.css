@@ -64,25 +64,25 @@ body {
   font-family: "Museo Sans 500";
   height: 100%;
   width: 100%;
-  font-size: 1em;
   color: #3D3D3E;
 }
-
-
-body {
-  position: relative;
-  overflow: hidden;
-  background: url("../images/wallpaper-3.jpg") 50% 50% no-repeat;
-  background-size: cover;
-}
-
 
 a {
   color: inherit;
 }
 
+.kud-Intro {
+  position: relative;
+  overflow: hidden;
+  background: url("../images/wallpaper-3.jpg") 50% 50% no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
 
-.kud-Header {
+
+.kud-IntroHeader {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,9 +98,10 @@ a {
   text-decoration: none;
   transition: all 0.3s ease;
   color: white;
+  animation: bounceInDown 1s 1;
 }
 
-.kud-Header:before {
+.kud-IntroHeader:before {
   display: block;
   position: absolute;
   border: 1px dashed white;
@@ -115,22 +116,22 @@ a {
   box-sizing: border-box;
 }
 
-.kud-Header:hover {
+.kud-IntroHeader:hover {
   background: white;
   color: #151515;
 }
 
-.kud-Header:hover:before {
+.kud-IntroHeader:hover:before {
   border: 1px dashed #151515;
 }
 
 
-.kud-Header--alternative {
+.kud-IntroHeader--alternative {
   display: none;
 }
 
 
-.kud-Header-heading {
+.kud-IntroHeader-heading {
   font-family: 'Brothers Regular', sans-serif;
   margin: 0px;
   font-size: 2.8em;
@@ -138,52 +139,7 @@ a {
 }
 
 
-.kud-Links {
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.kud-Links ul {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
-  margin-left: -5px;
-}
-
-.kud-Links li {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.kud-Links li a {
-  background: #151515;
-  display: block;
-  width: 46px;
-  height: 46px;
-  position: relative;
-  border-radius: 50%;
-  font-size: 28px;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  line-height: 45px;
-  transition: all 0.3s ease;
-}
-
-.kud-Links li a span {
-  display: none;
-}
-
-.kud-Links li a:hover {
-  background: white;
-  color: #151515;
-}
-
-
-.kud-About {
+.kud-IntroAbout {
   background: #151515;
   color: white;
   padding: 10px;
@@ -204,41 +160,33 @@ a {
   margin-left: -180px;
   left: 50%;
   right: auto;
+  animation: bounceIn 0.5s 1;
 }
 
-.kud-About p {
+.kud-IntroAbout p {
   margin: 0;
   padding: 0;
   margin-top: 6.5rem;
 }
 
-.kud-About p span {
+.kud-IntroAbout p span {
   cursor: pointer;
   display: inline;
 }
 
 
-.kud-About--hidden {
+.kud-IntroAbout--hidden {
   display: none;
 }
 
-.kud-Header,
-.kud-Links,
-.kud-About {
+.kud-IntroHeader,
+.kud-IntroAbout {
   opacity: 0.9;
 }
 
-.kud-Header {
-  animation: bounceInDown 1s 1;
-}
-
-
-.kud-Links {
-  animation: fadeIn 1s 1;
-}
-
-.kud-Header--alternative {
-  display: block;
+.kud-IntroHeader--alternative {
+  /*display: block;*/
+  display: none;
   top: 5px;
   left: 5px;
   margin: 0px;
@@ -249,15 +197,90 @@ a {
   height: 100px;
 }
 
-.kud-Header--alternative:before {
+.kud-IntroHeader--alternative:before {
   border: 1px dashed #151515;
 }
 
-.kud-Header--alternative .kud-Header-heading {
+.kud-IntroHeader--alternative .kud-IntroHeader-heading {
   font-size: 2em;
 }
 
 .kud-About {
-  animation: bounceIn 0.5s 1;
+  min-height: 100%;
+  color: #999999;
+  font-family: 'Lusitana', serif;
+  font-size: 1.1rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  hyphens: auto;
 }
 
+.kud-About-wrapper {
+  max-width: 550px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+.kud-About-avatar {
+  width: 8.75rem;
+  height: 8.75rem;
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 3px solid #FFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+}
+
+
+.kud-About-heading {
+  color: #2E2E2E;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  margin-bottom: 4rem;
+  padding: 0 2rem;
+}
+
+.kud-AboutLinks {
+  margin-top: 5rem;
+  text-align: center;
+  animation: fadeIn 1s 1;
+}
+
+& ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  margin-left: -5px;
+}
+
+& li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+& li a {
+  background: #151515;
+  display: block;
+  width: 46px;
+  height: 46px;
+  position: relative;
+  border-radius: 50%;
+  font-size: 28px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.4s ease;
+  border: 1px solid black;
+}
+
+& li a span {
+  display: none;
+}
+
+& li a:hover {
+  background: white;
+  color: #151515;
+}
