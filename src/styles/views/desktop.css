@@ -172,8 +172,7 @@ a {
 
 .kud-About {
   min-height: 100%;
-  color: #999999;
-  font-family: 'Lusitana', serif;
+  color: #666666;
   font-size: 1.1rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -199,6 +198,7 @@ a {
 
 
 .kud-About-heading {
+  font-family: 'Lusitana', serif;
   color: #2E2E2E;
   text-align: center;
   font-size: 1.5rem;
@@ -247,4 +247,115 @@ a {
 & li a:hover {
   background: white;
   color: #151515;
+}
+
+.kud-Hobbies {
+  background: #F3F3F3;
+  padding: 3.125rem;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+&-heading {
+  font-size: 1.6rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+&-list {
+  margin: 0;
+  padding: 0;
+}
+
+&-listItem {
+  list-style: none;
+  /*position: relative;*/
+  /*padding-left: 8.25rem;*/
+  background: white;
+  color: #908E8E;
+  margin-bottom: 1rem;
+}
+
+/*&-listItem:before {
+  height: 100%;
+  background: #00A8D2;
+  width: 8.25rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+}
+*/
+
+&-listItem--film {
+  border-left: 3px solid #23C515;
+}
+
+&-listItem--serie {
+  border-left: 3px solid #FE2B42;
+}
+
+&-listItem--music {
+  border-left: 3px solid #4083A9;
+}
+
+&-innerList {
+  margin: 0;
+  padding: 1rem;
+}
+
+&-innerListItem {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+&-innerListItem:first-child {
+  margin-top: 0;
+}
+
+&-innerHeading {
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+&-innerListItem ul {
+  margin: 0;
+  padding: 0;
+}
+
+&-innerListItem li {
+  list-style: none;
+  display: inline-block;
+}
+
+&-innerListItem li:after {
+  content: ', ';
+}
+
+&-innerListItem li:last-child:after {
+  content: '';
+}
+
+.kud-Activity {
+  background: white;
+  padding: 3.125rem;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+&-heading {
+  font-size: 1.6rem;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+&-content {
+  max-width: 520px;
+  margin: auto;
+}
+
+&-content iframe {
+  height: 500px;
 }
