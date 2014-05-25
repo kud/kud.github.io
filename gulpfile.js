@@ -1,8 +1,6 @@
 // import
 var gulp = require('gulp')
   , rimraf = require('rimraf')
-  , streamqueue = require('streamqueue')
-  , notifier = require('node-notifier')
   , lr = require('tiny-lr')
   , server = lr()
 
@@ -68,38 +66,32 @@ gulp.task('jshint', function() {
 
 // styles
 gulp.task('styles:desktop', function() {
-  return streamqueue({ objectMode: true },
-      gulp.src('bower-components/normalize-css/normalize.css'),
-      gulp.src('src/styles/import-desktop.css')
-        .pipe( plumber() )
-        .pipe( rework(
-          reworkPlugins.importer({ path: 'src/styles/' }),
-          reworkPlugins.parent,
-          {
-            sourcemap: true
-          }
-        ) )
-        .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
-    )
+  return gulp.src('src/styles/import-desktop.css')
+    .pipe( plumber() )
+    .pipe( rework(
+      reworkPlugins.importer({ path: 'src/styles/' }),
+      reworkPlugins.parent,
+      {
+        sourcemap: true
+      }
+    ) )
+    .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
     .pipe( concat('main.css') )
     .pipe( gulp.dest('dist/styles/') )
     .pipe( livereload( server ) )
 })
 
 gulp.task('styles:mobile', function() {
-  return streamqueue({ objectMode: true },
-      gulp.src('bower-components/normalize-css/normalize.css'),
-      gulp.src('src/styles/import-mobile.css')
-        .pipe( plumber() )
-        .pipe( rework(
-          reworkPlugins.importer({ path: 'src/styles/' }),
-          reworkPlugins.parent,
-          {
-            sourcemap: true
-          }
-        ) )
-        .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
-    )
+  return gulp.src('src/styles/import-mobile.css')
+    .pipe( plumber() )
+    .pipe( rework(
+      reworkPlugins.importer({ path: 'src/styles/' }),
+      reworkPlugins.parent,
+      {
+        sourcemap: true
+      }
+    ) )
+    .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
     .pipe( concat('main-mobile.css') )
     .pipe( gulp.dest('dist/styles/') )
     .pipe( livereload( server ) )

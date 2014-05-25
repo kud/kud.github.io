@@ -1,6 +1,6 @@
-bower-components
-node_modules
-build
-dist
-.grunt
-.sass-cache
+/bower-components
+/node_modules
+/build
+/dist
+/.grunt
+/.sass-cache
