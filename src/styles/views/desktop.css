@@ -172,11 +172,17 @@ a {
 
 .kud-About {
   min-height: 100%;
-  color: #666666;
+  color: #999;
   font-size: 1.1rem;
+  line-height: 1.7rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
   hyphens: auto;
+}
+
+.kud-About a {
+  text-decoration: none;
+  color: #666;
 }
 
 .kud-About-wrapper {
@@ -202,9 +208,14 @@ a {
   color: #2E2E2E;
   text-align: center;
   font-size: 1.5rem;
-  line-height: 2.2rem;
+  line-height: 2.4rem;
   margin-bottom: 4rem;
   padding: 0 2rem;
+}
+
+.kud-About-heading a {
+  text-decoration: none;
+  color: #ED4545;
 }
 
 .kud-AboutLinks {
