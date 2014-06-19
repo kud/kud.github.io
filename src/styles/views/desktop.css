@@ -180,15 +180,35 @@ a {
   hyphens: auto;
 }
 
-.kud-About a {
-  text-decoration: none;
-  color: #666;
-}
-
 .kud-About-wrapper {
   max-width: 550px;
   margin: auto;
   padding: 0 15px;
+}
+
+.kud-About-wrapper a {
+  text-decoration: none;
+  color: #666;
+  position: relative;
+}
+
+.kud-About-wrapper a::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #ED4545;
+  content: '';
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(10px);
+}
+
+.kud-About-wrapper a:hover::after,
+.kud-About-wrapper a:focus::after {
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .kud-About-avatar {
@@ -216,6 +236,10 @@ a {
 .kud-About-heading a {
   text-decoration: none;
   color: #ED4545;
+}
+
+.kud-About-heading a::after {
+  background: #ED4545;
 }
 
 .kud-AboutLinks {
