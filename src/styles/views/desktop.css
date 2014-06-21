@@ -4,18 +4,26 @@
     transform: translateY(-100%);
   }
 
+  50% {
+    transform: translateY(-50%);
+  }
+
+  70% {
+    transform: translateY(-75%);
+  }
+
   85%, 95%, 100% {
     transform: translateY(0);
   }
 
-  80% {
+/*  80% {
     transform: translateY(30px);
   }
 
   90% {
     transform: translateY(15px);
   }
-
+*/
 }
 
 
@@ -28,7 +36,7 @@ body {
 }
 
 body {
-  animation: intro ease 2s;
+  animation: intro ease-out 2s;
 }
 
 a {
@@ -139,19 +147,22 @@ a {
   display: inline;
 }
 
-
-.kud-IntroAbout--hidden {
-  display: none;
-}
-
 .kud-IntroHeader,
 .kud-IntroAbout {
   opacity: 0.9;
+  transition: opacity .2s ease;
+}
+
+.kud-IntroAbout--hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 .kud-IntroHeader--alternative {
   /*display: block;*/
-  display: none;
+  opacity: 0;
   top: 5px;
   left: 5px;
   margin: 0px;
@@ -202,7 +213,7 @@ a {
   content: '';
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
-  transform: translateY(10px);
+  transform: translateY(5px);
 }
 
 .kud-About-wrapper a:hover::after,
