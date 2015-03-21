@@ -3,5 +3,5 @@
 One command.
 
 ```
-$ make
+$ jake
 ```

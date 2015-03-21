@@ -1,150 +1,66 @@
-// import
-var gulp = require('gulp')
-  , rimraf = require('rimraf')
-  , lr = require('tiny-lr')
-  , server = lr()
-
-var concat = require('gulp-concat')
-  , plumber = require('gulp-plumber')
-  , jshint = require('gulp-jshint')
-  , rework = require('gulp-rework')
-  , autoprefixer = require('gulp-autoprefixer')
-  , browserify = require('gulp-browserify')
-  , livereload = require('gulp-livereload')
-  , iconfont = require('gulp-iconfont')
-  , iconfontCss = require('gulp-iconfont-css')
-  , declare = require('gulp-declare')
-  , replace = require('gulp-replace')
-  , imagemin = require('gulp-imagemin')
-
-// rework
-var reworkPlugins = {
-  parent: require('rework-parent'),
-  importer: require('rework-importer')
-}
+/**
+ * Imports
+ */
+var gulp       = require('gulp')
+var livereload = require('gulp-livereload')
 
 /**
- * Tasks
+ * Helpers
  */
+var taskPath = __dirname + '/tasks/'
 
-// clean
-gulp.task("clean", function() {
-  return rimraf.sync('dist/')
-})
+/**
+ * Private tasks
+ */
+gulp.task( 'clean', require(taskPath + 'clean') )
+gulp.task( 'deploy', ['compile'], require(taskPath + 'deploy') )
+gulp.task( 'icons', require(taskPath + 'icons'))
+gulp.task( 'images', require(taskPath + 'images') )
+gulp.task( 'scripts', ['validate'], require(taskPath + 'scripts') )
+gulp.task( 'server', require(taskPath + 'server') )
+gulp.task( 'static', require(taskPath + 'static') )
+gulp.task( 'styles', require(taskPath + 'styles') )
+gulp.task( 'validate', require(taskPath + 'validate') )
 
-// assets
-gulp.task('assets', function() {
-  return gulp.src('src/assets/**/*')
-    .pipe( gulp.dest('dist/') )
-    .pipe( livereload( server ) )
-})
+/**
+ * Public tasks
+ */
+gulp.task('import', ['icons'])
+gulp.task('compile', ['clean', 'static', 'images', 'scripts', 'styles'])
+gulp.task('watch', ['server', 'compile'], function() {
 
-// scripts
-gulp.task('scripts:desktop', function() {
-  return gulp.src('src/scripts/desktop.js')
-    .pipe( plumber() )
-    .pipe( concat('main.js', { newLine: ';' } ) )
-    .pipe( gulp.dest('dist/scripts/') )
-    .pipe( livereload( server ) )
-})
+  livereload.listen()
 
-gulp.task('scripts:mobile', function() {
-  return gulp.src('src/scripts/mobile.js')
-    .pipe( plumber() )
-    .pipe( concat('main-mobile.js', { newLine: ';' } ) )
-    .pipe( gulp.dest('dist/scripts/') )
-    .pipe( livereload( server ) )
-})
-
-// check scripts
-gulp.task('jshint', function() {
-  return gulp.src( 'src/scripts/**/*' )
-    .pipe( plumber() )
-    .pipe( jshint('.jshintrc'))
-    .pipe( jshint.reporter('jshint-stylish') )
-})
-
-// styles
-gulp.task('styles:desktop', function() {
-  return gulp.src('src/styles/import-desktop.css')
-    .pipe( plumber() )
-    .pipe( rework(
-      reworkPlugins.importer({ path: 'src/styles/' }),
-      reworkPlugins.parent,
-      {
-        sourcemap: true
-      }
-    ) )
-    .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
-    .pipe( concat('main.css') )
-    .pipe( gulp.dest('dist/styles/') )
-    .pipe( livereload( server ) )
-})
-
-gulp.task('styles:mobile', function() {
-  return gulp.src('src/styles/import-mobile.css')
-    .pipe( plumber() )
-    .pipe( rework(
-      reworkPlugins.importer({ path: 'src/styles/' }),
-      reworkPlugins.parent,
-      {
-        sourcemap: true
-      }
-    ) )
-    .pipe( autoprefixer("last 2 versions", "> 5%", "Android 4", "Firefox > 25") )
-    .pipe( concat('main-mobile.css') )
-    .pipe( gulp.dest('dist/styles/') )
-    .pipe( livereload( server ) )
-})
-
-
-// optimise image
-gulp.task('images', function() {
- return gulp.src('src/images/**/*')
-    .pipe( imagemin() )
-    .pipe( gulp.dest('dist/images') )
-    .pipe( livereload( server ) )
-})
-
-// glyphicons
-gulp.task('glyphicons', function() {
- return gulp.src('src/glyphicons/**/*')
-    .pipe(iconfontCss({
-      fontName: 'icons',
-      targetPath: '../../styles/shared/icons.css',
-      fontPath: '../fonts/'
-    }))
-    .pipe(iconfont({
-      fontName: 'icons'
-     }))
-    .pipe( gulp.dest('src/assets/fonts') )
-})
-
-// watch
-gulp.task('watch', function () {
-
-  // listen on port 35729
-  server.listen(35729, function (err) {
-    if ( err ) {
-      return console.log( err )
-    }
-
-    gulp.watch( [ 'src/assets/**/*' ], ['assets'] )
-    gulp.watch( [ 'src/scripts/**/*' ], ['jshint', 'scripts:desktop', 'scripts:mobile'] )
-    gulp.watch( [ 'src/styles/**/*' ], ['styles:desktop', 'styles:mobile'] )
-    gulp.watch( [ 'src/images/**/*' ], ['images'] )
+  gulp.watch( [
+      'src/**/*',
+      '!src/icons/',
+      '!src/icons/**/*',
+      '!src/images/',
+      '!src/images/**/*',
+      '!src/scripts/',
+      '!src/scripts/**/*',
+      '!src/styles/',
+      '!src/styles/**/*',
+    ], function() {
+    gulp.start('static')
   })
 
-})
+  gulp.watch( [
+      'src/images/**/*'
+    ], function() {
+    gulp.start('images')
+  })
 
-/**
- * Commands
- */
+  gulp.watch( ['src/**/*.js'], function(){
+    gulp.start('scripts')
+  })
 
-gulp.task('dev', ['clean'], function() {
-  gulp.start('assets', 'glyphicons', 'styles:desktop', 'styles:mobile', 'jshint', 'scripts:desktop', 'scripts:mobile', 'images')
-})
+  gulp.watch( ['src/**/*.css'], function(){
+    gulp.start('styles')
+  })
 
-gulp.task('default', ['dev'], function() {
-  gulp.start('watch')
+  gulp.watch([
+    'src/**/*'
+  ]).on('change', livereload.changed)
+
 })
