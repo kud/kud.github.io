@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link href="/styles/demo.css" rel="stylesheet" type="text/css">
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .kud-Round {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: #374046;
+      }
+
+      .kud-Round-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        height: 0;
+        box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.75);
+        animation: anim infinite 2s;
+      }
+
+      @keyframes anim {
+        0% {
+          box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.75);
+        }
+
+        50% {
+          box-shadow: 0px 0px 30px 10px rgba(0,0,0,0.5);
+        }
+
+        100% {
+          box-shadow: 0px 0px 30px -10px rgba(0,0,0,0.75);
+        }
+      }
+
+      .kud-Round-item--one {
+        background: #F44336;
+        width: 40%;
+        padding-bottom: 40%;
+      }
+
+      .kud-Round-item--two {
+        background: #FF5722;
+        width: 35%;
+        padding-bottom: 35%;
+      }
+
+      .kud-Round-item--three {
+        background: #FF9800;
+        width: 30%;
+        padding-bottom: 30%;
+      }
+
+      .kud-Round-item--four {
+        background: #FFC107;
+        width: 25%;
+        padding-bottom: 25%;
+      }
+
+      .kud-Round-item--five {
+        background: #FFEB3B;
+        width: 20%;
+        padding-bottom: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kud-Round">
+      <div class="kud-Round-item kud-Round-item--one"></div>
+      <div class="kud-Round-item kud-Round-item--two"></div>
+      <div class="kud-Round-item kud-Round-item--three"></div>
+      <div class="kud-Round-item kud-Round-item--four"></div>
+      <div class="kud-Round-item kud-Round-item--five"></div>
+      <div class="kud-Round-item kud-Round-item--six"></div>
+    </div>
+  </body>
+</html>
