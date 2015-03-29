@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Demo</title>
+    <link href="/styles/demo.css" rel="stylesheet" type="text/css">
+    <!-- <link href="./animate.css" rel="stylesheet" type="text/css"> -->
+    <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
+    <script src="./jquery.arctext.js"></script>
+    <script src="./jquery.textillate.js"></script>
+    <style>
+      @font-face {
+        font-family:"thatsallfolks";
+        src:
+          url("font.eot?") format("eot"),
+          url("font.woff") format("woff"),
+          url("font.ttf") format("truetype"),
+          url("font.svg#ThatsFontFolksItalic") format("svg");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+    <style>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+      }
+
+      .kud-Round {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background: #34020B;
+        overflow: hidden;
+      }
+
+      .kud-Round-item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border-radius: 50%;
+        height: 0;
+        box-shadow: 0px 0px 100px -10px rgb(210,86,16);
+        background: radial-gradient(ellipse at center, #c65a2b 0%, #591b0e 70%, #591b0e 100%);
+        border: 1px solid #DD8A6A;
+      }
+
+      .kud-Round-item--one {
+        width: 110%;
+        padding-bottom: 110%;
+      }
+
+      .kud-Round-item--two {
+        width: 90%;
+        padding-bottom: 90%;
+      }
+
+      .kud-Round-item--three {
+        width: 65%;
+        padding-bottom: 65%;
+      }
+
+      .kud-Round-item--four {
+        width: 50%;
+        padding-bottom: 50%;
+      }
+
+      .kud-Round-item--five {
+        width: 35%;
+        padding-bottom: 35%;
+      }
+
+      .kud-Round-item--final {
+        width: 25%;
+        padding-bottom: 25%;
+        background: radial-gradient(ellipse at center, #03152B 0%, #03152B 20%, #050100 100%);
+      }
+
+      .kud-Text {
+        font-family: 'thatsallfolks';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) rotate(-10deg);
+        color: white;
+        font-size: 10rem;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 1);
+        white-space: nowrap;
+        letter-spacing: 0.5rem;
+      }
+
+      .kud-Text--animated {
+        animation: text 2s;
+      }
+
+      @keyframes text {
+        0%, 20%, 40%, 60%, 80%, 100% {
+          transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+        }
+
+        0% {
+          opacity: 0;
+          transform: scale3d(.3, .3, .3) translate(-50%,-50%) rotate(-10deg);
+        }
+
+        20% {
+          transform: scale3d(1.1, 1.1, 1.1) translate(-50%,-50%) rotate(-10deg);
+        }
+
+        40% {
+          transform: scale3d(.9, .9, .9) translate(-50%,-50%) rotate(-10deg);
+        }
+
+        60% {
+          opacity: 1;
+          transform: scale3d(1.03, 1.03, 1.03) translate(-50%,-50%) rotate(-10deg);
+        }
+
+        80% {
+          transform: scale3d(.97, .97, .97) translate(-50%,-50%) rotate(-10deg);
+        }
+
+        100% {
+          opacity: 1;
+          transform: scale3d(1, 1, 1) translate(-50%,-50%) rotate(-10deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kud-Round">
+      <div class="kud-Round-item kud-Round-item--one"></div>
+      <div class="kud-Round-item kud-Round-item--two"></div>
+      <div class="kud-Round-item kud-Round-item--three"></div>
+      <div class="kud-Round-item kud-Round-item--four"></div>
+      <div class="kud-Round-item kud-Round-item--five"></div>
+      <div class="kud-Round-item kud-Round-item--six"></div>
+      <div class="kud-Round-item kud-Round-item--final"></div>
+      <div class="kud-js-Text kud-Text">That's all Folks!</div>
+      <audio src="./song.mp3" autobuffer autoplay="autoplay"></audio>
+    </div>
+    <script>
+      $(document).ready(function() {
+        $('.kud-js-Text').textillate()
+      })
+    </script>
+  </body>
+</html>
