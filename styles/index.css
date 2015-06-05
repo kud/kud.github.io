@@ -1,9 +1,9 @@
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
  */
 
 html {
@@ -71,7 +71,7 @@ audio:not([controls]) {
 
 /**
  * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
  */
 
 [hidden],
@@ -91,7 +91,8 @@ a {
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
  */
 
 a:active,
@@ -349,13 +350,12 @@ input[type="number"]::-webkit-outer-spin-button {
 
 /**
  * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
  */
 
 input[type="search"] {
-  -webkit-appearance: textfield; /* 1 */ /* 2 */
-  box-sizing: content-box;
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
 }
 
 /**
@@ -591,6 +591,7 @@ th {
    */ }
   .hint:after, [data-hint]:after {
     text-shadow: 0 -1px 0px black;
+    box-shadow: 4px 4px 8px #000000;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
 
 /**
@@ -729,8 +730,8 @@ html {
 }
 
 *,
-*::before,
-*::after {
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -811,7 +812,7 @@ a:focus {
   position: relative;
 }
 
-.kud-SvgEvent::before {
+.kud-SvgEvent:before {
   content: '';
   position: absolute;
   top: 0;
@@ -958,7 +959,7 @@ a {
   color: white;
 }
 
-  .kud-IntroHeader::before {
+  .kud-IntroHeader:before {
     display: block;
     position: absolute;
     border: 1px dashed white;
@@ -978,7 +979,7 @@ a {
     color: #151515;
   }
 
-  .kud-IntroHeader:hover::before {
+  .kud-IntroHeader:hover:before {
     border: 1px dashed #151515;
   }
 
@@ -1057,7 +1058,7 @@ a {
     height: 100px;
   }
 
-  .kud-IntroHeader--alternative::before {
+  .kud-IntroHeader--alternative:before {
     border: 1px dashed #151515;
   }
 
@@ -1094,7 +1095,7 @@ a {
       position: relative;
     }
 
-    .kud-About-wrapper a::after {
+    .kud-About-wrapper a:after {
       position: absolute;
       top: 100%;
       left: 0;
@@ -1110,8 +1111,8 @@ a {
               transform: translateY(5px);
     }
 
-    .kud-About-wrapper a:hover::after,
-    .kud-About-wrapper a:focus::after {
+    .kud-About-wrapper a:hover:after,
+    .kud-About-wrapper a:focus:after {
       opacity: 1;
       -webkit-transform: translateY(0px);
           -ms-transform: translateY(0px);
@@ -1127,6 +1128,7 @@ a {
     margin: auto;
     border-radius: 50%;
     border: 3px solid #FFF;
+    box-shadow: 0px 1px 1px #000000;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     margin-bottom: 48px;
     margin-bottom: 3rem;
@@ -1152,7 +1154,7 @@ a {
       color: #ED4545;
     }
 
-    .kud-About-heading a::after {
+    .kud-About-heading a:after {
       background: #ED4545;
     }
 
