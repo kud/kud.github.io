@@ -1,8 +1,8 @@
 {
   "rules": {
-    "quotes": "2",
-    "semi": "2",
-    "strict": "2"
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "never"],
+    "strict": [2, "never"]
   },
   "globals": {
     "document": "true"

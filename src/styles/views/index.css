@@ -22,7 +22,8 @@
 html,
 body {
   /*font-family: "Droid Serif", serif;*/
-  font-family: "Lato", serif;
+/*  font-family: "Lato", serif;*/
+  font-family: "Proxima Nova Thin", serif;
   height: 100%;
   width: 100%;
   color: #3D3D3E;
@@ -40,7 +41,8 @@ a {
   position: relative;
   overflow: hidden;
   background-color: #F5F5F5;
-  background-image: url("../images/wallpaper-3-opt.jpg");
+/*  background-image: url("../images/wallpaper-3-opt.jpg");*/
+  background-image: url("../images/wallpaper-1-opt.jpg");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -175,7 +177,7 @@ a {
 
 .kud-About {
   min-height: 100%;
-  color: #999;
+  color: #8F8F8F;
   font-size: 1.1rem;
   line-height: 1.7rem;
   padding-top: 5rem;
@@ -191,7 +193,7 @@ a {
 
     .kud-About-wrapper a {
       text-decoration: none;
-      color: #666;
+      color: #222;
       position: relative;
     }
 
@@ -200,8 +202,8 @@ a {
       top: 100%;
       left: 0;
       width: 100%;
-      height: 2px;
-      background: #ED4545;
+      height: 1px;
+      background: #222;
       content: '';
       opacity: 0;
       transition: opacity 0.3s, transform 0.3s;
@@ -243,6 +245,7 @@ a {
 
     .kud-About-heading a::after {
       background: #ED4545;
+      height: 2px;
     }
 
 .kud-AboutLinks {

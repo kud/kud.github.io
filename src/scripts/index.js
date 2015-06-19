@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   function addAlternative( e ) {
     e.preventDefault()
 
-    this.className = this.className + " kud-IntroHeader--alternative"
+    this.className = this.className + ' kud-IntroHeader--alternative'
     about.className = about.className.replace(/kud-IntroAbout--hidden/g, '')
     aboutLink.removeEventListener('click', addAlternative)
   }
