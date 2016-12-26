@@ -422,7 +422,7 @@ td,
 th {
   padding: 0;
 }
-/*! Hint.css - v1.3.4 - 2015-02-28
+/*! Hint.css - v1.3.5 - 2015-06-16
 * http://kushagragour.in/lab/hint/
 * Copyright (c) 2015 Kushagra Gour; Licensed MIT */
 
@@ -529,8 +529,7 @@ th {
   left: 50%; }
 .hint--top:hover:after, .hint--top:hover:before, .hint--top:focus:after, .hint--top:focus:before {
   -webkit-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-      transform: translateY(-8px); }
+  transform: translateY(-8px); }
 
 /**
  * bottom tooltip
@@ -544,8 +543,7 @@ th {
   left: 50%; }
 .hint--bottom:hover:after, .hint--bottom:hover:before, .hint--bottom:focus:after, .hint--bottom:focus:before {
   -webkit-transform: translateY(8px);
-  -ms-transform: translateY(8px);
-      transform: translateY(8px); }
+  transform: translateY(8px); }
 
 /**
  * right tooltip
@@ -560,8 +558,7 @@ th {
   bottom: 50%; }
 .hint--right:hover:after, .hint--right:hover:before, .hint--right:focus:after, .hint--right:focus:before {
   -webkit-transform: translateX(8px);
-  -ms-transform: translateX(8px);
-      transform: translateX(8px); }
+  transform: translateX(8px); }
 
 /**
  * left tooltip
@@ -576,8 +573,7 @@ th {
   bottom: 50%; }
 .hint--left:hover:after, .hint--left:hover:before, .hint--left:focus:after, .hint--left:focus:before {
   -webkit-transform: translateX(-8px);
-  -ms-transform: translateX(-8px);
-      transform: translateX(-8px); }
+  transform: translateX(-8px); }
 
 /**
  * source: hint-theme.scss
@@ -591,7 +587,6 @@ th {
    */ }
   .hint:after, [data-hint]:after {
     text-shadow: 0 -1px 0px black;
-    box-shadow: 4px 4px 8px #000000;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3); }
 
 /**
@@ -680,20 +675,16 @@ th {
   visibility: visible; }
 .hint--always.hint--top:after, .hint--always.hint--top:before {
   -webkit-transform: translateY(-8px);
-  -ms-transform: translateY(-8px);
-      transform: translateY(-8px); }
+  transform: translateY(-8px); }
 .hint--always.hint--bottom:after, .hint--always.hint--bottom:before {
   -webkit-transform: translateY(8px);
-  -ms-transform: translateY(8px);
-      transform: translateY(8px); }
+  transform: translateY(8px); }
 .hint--always.hint--left:after, .hint--always.hint--left:before {
   -webkit-transform: translateX(-8px);
-  -ms-transform: translateX(-8px);
-      transform: translateX(-8px); }
+  transform: translateX(-8px); }
 .hint--always.hint--right:after, .hint--always.hint--right:before {
   -webkit-transform: translateX(8px);
-  -ms-transform: translateX(8px);
-      transform: translateX(8px); }
+  transform: translateX(8px); }
 
 /**
  * source: hint-rounded.scss
@@ -730,8 +721,8 @@ html {
 }
 
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -812,7 +803,7 @@ a:focus {
   position: relative;
 }
 
-.kud-SvgEvent:before {
+.kud-SvgEvent::before {
   content: '';
   position: absolute;
   top: 0;
@@ -969,7 +960,7 @@ a {
   color: white;
 }
 
-  .kud-IntroHeader:before {
+  .kud-IntroHeader::before {
     display: block;
     position: absolute;
     border: 1px dashed white;
@@ -989,7 +980,7 @@ a {
     color: #151515;
   }
 
-  .kud-IntroHeader:hover:before {
+  .kud-IntroHeader:hover::before {
     border: 1px dashed #151515;
   }
 
@@ -1068,7 +1059,7 @@ a {
     height: 100px;
   }
 
-  .kud-IntroHeader--alternative:before {
+  .kud-IntroHeader--alternative::before {
     border: 1px dashed #151515;
   }
 
@@ -1105,7 +1096,7 @@ a {
       position: relative;
     }
 
-    .kud-About-wrapper a:after {
+    .kud-About-wrapper a::after {
       position: absolute;
       top: 100%;
       left: 0;
@@ -1117,15 +1108,13 @@ a {
       -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
               transition: opacity 0.3s, transform 0.3s;
       -webkit-transform: translateY(5px);
-          -ms-transform: translateY(5px);
               transform: translateY(5px);
     }
 
-    .kud-About-wrapper a:hover:after,
-    .kud-About-wrapper a:focus:after {
+    .kud-About-wrapper a:hover::after,
+    .kud-About-wrapper a:focus::after {
       opacity: 1;
       -webkit-transform: translateY(0px);
-          -ms-transform: translateY(0px);
               transform: translateY(0px);
     }
 
@@ -1138,7 +1127,6 @@ a {
     margin: auto;
     border-radius: 50%;
     border: 3px solid #FFF;
-    box-shadow: 0px 1px 1px #000000;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
     margin-bottom: 48px;
     margin-bottom: 3rem;
@@ -1164,7 +1152,7 @@ a {
       color: #ED4545;
     }
 
-    .kud-About-heading a:after {
+    .kud-About-heading a::after {
       background: #ED4545;
       height: 2px;
     }
