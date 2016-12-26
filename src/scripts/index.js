@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   var email = document.getElementById('kud-Email')
-  email.href = ['mailto', ':', 'm', '@', 'kud', '.', 'io'].join('')
+  email.href = ['mailto', ':', 'm+site', '@', 'kud', '.', 'io'].join('')
 
   aboutLink.addEventListener('click', addAlternative)
 })
