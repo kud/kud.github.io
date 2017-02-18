@@ -3,5 +3,5 @@
 One command.
 
 ```
-$ jake
+$ npm run
 ```

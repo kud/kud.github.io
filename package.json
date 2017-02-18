@@ -7,6 +7,12 @@
     "type": "git",
     "url": "https://github.com/kud/kud.github.io.git"
   },
+  "scripts": {
+    "build": "gulp compile",
+    "import": "gulp import",
+    "watch": "gulp watch",
+    "deploy": "gulp deploy"
+  },
   "devDependencies": {
     "animate.css": "git://github.com/daneden/animate.css",
     "chalk": "1.0.0",
