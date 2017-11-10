@@ -1,0 +1,12 @@
+html,
+body {
+  height: auto;
+  min-height: 100vh;
+  font-family: "Open Sans", Arial, sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  line-height: 2.5rem;
+}
