@@ -29,7 +29,7 @@
   text-decoration: none;
   color: #222;
   position: relative;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .kud-Content a::after {
@@ -59,6 +59,10 @@
   line-height: 4.2rem;
   margin-bottom: 7rem;
   padding: 0 3rem;
+}
+
+.kud-Content-heading:first-letter {
+  font-weight: 600;
 }
 
 .kud-Content-heading a {
