@@ -32,6 +32,12 @@ export default env => {
       new HtmlWebpackPlugin({
         template: "src/index.html",
         favicon: "src/favicon.png",
+        minify: {
+          removeComments: true,
+          collapseWhitespace: true,
+          minifyCSS: true,
+          minifyJS: true,
+        },
       }),
 
       new ExtractTextPlugin({
