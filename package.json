@@ -9,7 +9,7 @@
   },
   "scripts": {
     "prettier": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\"",
-    "start": "webpack-dev-server --host 0.0.0.0 --hot --config=./webpack.babel.js",
+    "start": "webpack-dev-server --host 0.0.0.0 --watch --config=./webpack.babel.js",
     "build": "rm -rf ./dist/ && webpack --progress --colors --config=./webpack.babel.js",
     "build:min": "rm -rf ./dist/ && webpack --progress --colors --config=./webpack.min.babel.js",
     "deploy": "npm run build:min && gh-pages -d dist -b master"
@@ -36,7 +36,6 @@
     "webpack-dev-server": "2.9.4"
   },
   "dependencies": {
-    "hint.css": "2.5.0",
     "normalize.css": "7.0.0"
   }
 }
