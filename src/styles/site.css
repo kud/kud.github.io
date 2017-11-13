@@ -15,13 +15,23 @@ body {
   display: flex;
 }
 
-.kud-Wrapper::before {
+.kud-Gorgeous {
   content: "";
   flex: 1 40%;
   background-image: url("http://www.gravatar.com/avatar/e6eaeaa6da69e804c27c2d4cd55107e0?s=1024");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  transition: flex 500ms ease;
+}
+
+@media (min-width: 840px) {
+
+.kud-Gorgeous:hover {
+  flex: 1 80%;
+  transition: flex 500ms ease;
+}
+
 }
 
 .kud-Content {
