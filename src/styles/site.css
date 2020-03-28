@@ -2,13 +2,13 @@ html,
 body {
   height: auto;
   min-height: 100vh;
-  font-family: "Quicksand", Arial, sans-serif;
+  font-family: Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
-  line-height: 2.5rem;
+  line-height: 2.8rem;
 }
 
 .kud-Wrapper {
@@ -25,14 +25,14 @@ body {
   transition: flex 200ms ease;
 }
 
-@media (min-width: 840px) {
-
-.kud-Gorgeous:hover {
-  flex: 1 80%;
-  transition: flex 200ms ease;
-}
-
-}
+/*@media (min-width: 840px) {*/
+/**/
+/*.kud-Gorgeous:hover {*/
+/*  flex: 1 80%;*/
+/*  transition: flex 200ms ease;*/
+/*}*/
+/**/
+/*}*/
 
 .kud-Content {
   flex: 1 60%;
@@ -171,7 +171,7 @@ body {
     border-radius: 50%;
     /* border: 3px solid #fff; */
     /* box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); */
-    border: 1px solid #CCCCCC;
+    border: 1px solid #cccccc;
     margin-top: 3rem;
   }
 
