@@ -9,10 +9,11 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
+    "copy:public": "mkdir dist && cp src/CNAME dist/CNAME",
     "prestart": "npm run clean",
-    "start": "parcel src/index.html",
+    "start": "npm run copy:public && parcel src/index.html",
     "prebuild": "npm run clean",
-    "build": "parcel build src/index.html",
+    "build": "npm run copy:public && parcel build src/index.html",
     "deploy": "npm run build && gh-pages -d dist -b master",
     "format": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\""
   },
