@@ -8,34 +8,25 @@
     "url": "https://github.com/kud/kud.github.io.git"
   },
   "scripts": {
-    "prettier": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\"",
-    "start": "webpack-dev-server --host 0.0.0.0 --watch --config=./webpack.babel.js",
-    "build": "rm -rf ./dist/ && webpack --progress --colors --config=./webpack.babel.js",
-    "build:min": "rm -rf ./dist/ && webpack --progress --colors --config=./webpack.min.babel.js",
-    "deploy": "npm run build:min && gh-pages -d dist -b master"
+    "clean": "rm -rf dist",
+    "prestart": "npm run clean",
+    "start": "parcel src/index.html",
+    "prebuild": "npm run clean",
+    "build": "parcel build src/index.html",
+    "deploy": "npm run build && gh-pages -d dist -b master",
+    "format": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\""
   },
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-loader": "7.1.2",
-    "babel-plugin-transform-class-properties": "6.24.1",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.6.1",
-    "cname-webpack-plugin": "1.0.1",
-    "css-loader": "0.28.7",
-    "extract-text-webpack-plugin": "3.0.2",
-    "file-loader": "1.1.5",
-    "gh-pages": "1.0.0",
-    "html-webpack-plugin": "2.30.1",
-    "image-webpack-loader": "3.4.2",
-    "nunjucks": "3.2.1",
-    "nunjucks-loader": "2.4.8",
-    "prettier": "1.8.2",
-    "style-loader": "0.19.0",
-    "url-loader": "0.6.2",
-    "webpack": "3.8.1",
-    "webpack-dev-server": "2.9.4"
+    "@babel/core": "7.9.6",
+    "@babel/node": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "7.9.6",
+    "@babel/preset-env": "7.9.6",
+    "gh-pages": "2.2.0",
+    "parcel": "1.12.4",
+    "prettier": "2.0.5"
   },
   "dependencies": {
-    "normalize.css": "7.0.0"
+    "normalize.css": "8.0.1"
   }
 }
