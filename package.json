@@ -1,5 +1,5 @@
 {
-  "name": "_kud.profile",
+  "name": "kud.profile",
   "version": "3.1.3",
   "author": "Erwann Mest",
   "license": "MIT",
@@ -7,25 +7,21 @@
     "type": "git",
     "url": "https://github.com/kud/kud.github.io.git"
   },
+  "source": "src/index.html",
   "scripts": {
     "clean": "rm -rf dist",
-    "copy:public": "mkdir dist && cp src/CNAME dist/CNAME",
     "prestart": "npm run clean",
-    "start": "npm run copy:public && npx parcel src/index.html",
+    "start": "parcel",
     "prebuild": "npm run clean",
-    "build": "npm run copy:public && npx parcel build src/index.html",
-    "deploy": "npm run build && npx gh-pages -d dist -b master",
-    "format": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\""
+    "build": "parcel build"
   },
   "devDependencies": {
-    "@babel/core": "7.9.6",
-    "@babel/node": "7.8.7",
-    "@babel/plugin-proposal-class-properties": "7.8.3",
-    "@babel/plugin-proposal-object-rest-spread": "7.9.6",
-    "@babel/preset-env": "7.9.6",
-    "gh-pages": "2.2.0",
-    "parcel": "1.12.4",
-    "prettier": "2.0.5"
+    "@babel/core": "7.17.8",
+    "@babel/node": "7.16.8",
+    "@babel/plugin-proposal-class-properties": "7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "7.17.3",
+    "@parcel/babel-preset-env": "2.4.1",
+    "parcel": "2.4.1"
   },
   "dependencies": {
     "normalize.css": "8.0.1"
