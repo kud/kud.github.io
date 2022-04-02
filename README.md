@@ -1,7 +1,1 @@
-# _kud.profile
-
-One command.
-
-```
-$ npm run
-```
+# \_kud.profile
