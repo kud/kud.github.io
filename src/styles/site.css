@@ -2,7 +2,7 @@ html,
 body {
   height: auto;
   min-height: 100vh;
-  font-family: "Jost", Arial, sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
   color: #333;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
