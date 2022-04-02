@@ -11,10 +11,10 @@
     "clean": "rm -rf dist",
     "copy:public": "mkdir dist && cp src/CNAME dist/CNAME",
     "prestart": "npm run clean",
-    "start": "npm run copy:public && parcel src/index.html",
+    "start": "npm run copy:public && npx parcel src/index.html",
     "prebuild": "npm run clean",
-    "build": "npm run copy:public && parcel build src/index.html",
-    "deploy": "npm run build && gh-pages -d dist -b master",
+    "build": "npm run copy:public && npx parcel build src/index.html",
+    "deploy": "npm run build && npx gh-pages -d dist -b master",
     "format": "prettier --trailing-comma all --no-semi --write \"**/*.{js,css}\" \"!dist/**/*\""
   },
   "devDependencies": {
