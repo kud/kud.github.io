@@ -15,13 +15,16 @@
     "prebuild": "npm run clean",
     "build": "parcel build"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {
-    "@babel/core": "7.20.12",
-    "@babel/node": "7.20.7",
+    "@babel/core": "7.26.0",
+    "@babel/node": "7.26.0",
     "@babel/plugin-proposal-class-properties": "7.18.6",
     "@babel/plugin-proposal-object-rest-spread": "7.20.7",
-    "@parcel/babel-preset-env": "2.8.3",
-    "parcel": "2.8.3"
+    "@parcel/babel-preset-env": "2.13.2",
+    "parcel": "2.13.2"
   },
   "dependencies": {
     "normalize.css": "8.0.1"
