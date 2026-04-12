@@ -384,6 +384,25 @@ section h2 {
   border-color: rgba(16, 185, 129, 0.3);
 }
 
+.project-card[data-cat="development"]:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.project-card[data-cat="entertainment"]:hover {
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.project-card[data-cat="data"]:hover {
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.project-card.hidden {
+  display: none;
+}
+
 .project-header {
   display: flex;
   align-items: center;
@@ -422,6 +441,56 @@ section h2 {
 .project-badge[data-cat="productivity"] {
   color: var(--cat-prod);
   background: var(--cat-prod-dim);
+}
+
+.project-badge[data-cat="development"] {
+  color: var(--cat-dev);
+  background: var(--cat-dev-dim);
+}
+
+.project-badge[data-cat="entertainment"] {
+  color: var(--cat-ent);
+  background: var(--cat-ent-dim);
+}
+
+.project-badge[data-cat="data"] {
+  color: var(--cat-data);
+  background: var(--cat-data-dim);
+}
+
+/* ── Filter tabs ── */
+
+.filter-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-tab {
+  padding: 7px 16px;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all var(--trans);
+}
+
+.filter-tab:hover {
+  color: var(--text);
+  background: var(--surface);
+}
+
+.filter-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #08080f;
 }
 
 .project-desc {
