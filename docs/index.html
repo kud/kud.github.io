@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@kud — open-source tools for developers</title>
+    <meta
+      name="description"
+      content="Open-source CLI tools, AI utilities, and developer projects by @kud."
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-inner">
+        <a class="nav-logo" href="#">@<span>kud</span></a>
+        <ul class="nav-links">
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+        <a
+          class="nav-cta"
+          href="https://github.com/kud"
+          target="_blank"
+          rel="noopener"
+          >GitHub ↗</a
+        >
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span> open source · kud.io
+          </div>
+          <h1>@kud</h1>
+          <p>open-source tools for developers</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#projects">Browse Projects</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/kud"
+              target="_blank"
+              rel="noopener"
+              >GitHub ↗</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-inner">
+          <span class="section-eyebrow reveal">Open source</span>
+          <h2 class="reveal">Projects</h2>
+          <p class="section-sub reveal">
+            A collection of CLI tools, AI utilities, and developer projects
+            built in the open.
+          </p>
+          <div class="projects-grid">
+            <div class="project-card reveal" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">shui</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Terminal UI component library for Zsh — buttons, spinners,
+                prompts, and layout primitives for shell scripts.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/shui"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/shui"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card reveal" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">ai-conventional-commit</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                AI-powered gitmoji commit messages — analyses your staged diff
+                and writes a conventional commit for you.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/ai-conventional-commit"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/ai-conventional-commit"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card reveal" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">gandi-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Modern CLI for the Gandi v5 REST API — manage domains, DNS
+                records, and mailboxes from the terminal.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/gandi-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/gandi-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span class="footer-name">@kud</span>
+        <nav class="footer-links">
+          <a href="https://github.com/kud" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+          <a href="https://kud.io" target="_blank" rel="noopener">kud.io</a>
+        </nav>
+        <span class="footer-copy">Built with GitHub Pages</span>
+      </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById("nav")
+      const onScroll = () =>
+        nav.classList.toggle("scrolled", window.scrollY > 20)
+      window.addEventListener("scroll", onScroll, { passive: true })
+      onScroll()
+
+      const observer = new IntersectionObserver(
+        (entries) =>
+          entries.forEach((e) => {
+            if (e.isIntersecting) e.target.classList.add("visible")
+          }),
+        { threshold: 0.07, rootMargin: "0px 0px -40px 0px" },
+      )
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el))
+    </script>
+  </body>
+</html>
