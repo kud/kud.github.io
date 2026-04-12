@@ -6,7 +6,7 @@
     <title>@kud — open-source tools for developers</title>
     <meta
       name="description"
-      content="Open-source CLI tools, AI utilities, and developer projects by @kud."
+      content="Open-source CLI tools, MCP servers, VS Code extensions, and web apps by @kud."
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
@@ -55,18 +55,36 @@
           <span class="section-eyebrow reveal">Open source</span>
           <h2 class="reveal">Projects</h2>
           <p class="section-sub reveal">
-            A collection of CLI tools, AI utilities, and developer projects
-            built in the open.
+            CLI tools, MCP servers, VS Code extensions, and web apps — all built
+            in the open.
           </p>
-          <div class="projects-grid">
-            <div class="project-card reveal" data-cat="cli">
+
+          <div class="filter-tabs reveal">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="cli">CLI</button>
+            <button class="filter-tab" data-filter="ai">AI</button>
+            <button class="filter-tab" data-filter="development">
+              Development
+            </button>
+            <button class="filter-tab" data-filter="productivity">
+              Productivity
+            </button>
+            <button class="filter-tab" data-filter="entertainment">
+              Entertainment
+            </button>
+            <button class="filter-tab" data-filter="data">Data</button>
+          </div>
+
+          <div class="projects-grid" id="projects-grid">
+            <!-- CLI -->
+            <div class="project-card" data-cat="cli">
               <div class="project-header">
                 <span class="project-name">shui</span>
                 <span class="project-badge" data-cat="cli">cli</span>
               </div>
               <p class="project-desc">
-                Terminal UI component library for Zsh — buttons, spinners,
-                prompts, and layout primitives for shell scripts.
+                Fluid terminal UI for Zsh — a design system for the shell with
+                buttons, spinners, prompts, and layout primitives.
               </p>
               <div class="project-links">
                 <a
@@ -86,34 +104,7 @@
               </div>
             </div>
 
-            <div class="project-card reveal" data-cat="ai">
-              <div class="project-header">
-                <span class="project-name">ai-conventional-commit</span>
-                <span class="project-badge" data-cat="ai">ai</span>
-              </div>
-              <p class="project-desc">
-                AI-powered gitmoji commit messages — analyses your staged diff
-                and writes a conventional commit for you.
-              </p>
-              <div class="project-links">
-                <a
-                  class="project-link docs"
-                  href="https://kud.github.io/ai-conventional-commit"
-                  target="_blank"
-                  rel="noopener"
-                  >Docs ↗</a
-                >
-                <a
-                  class="project-link"
-                  href="https://github.com/kud/ai-conventional-commit"
-                  target="_blank"
-                  rel="noopener"
-                  >Source ↗</a
-                >
-              </div>
-            </div>
-
-            <div class="project-card reveal" data-cat="cli">
+            <div class="project-card" data-cat="cli">
               <div class="project-header">
                 <span class="project-name">gandi-cli</span>
                 <span class="project-badge" data-cat="cli">cli</span>
@@ -133,6 +124,937 @@
                 <a
                   class="project-link"
                   href="https://github.com/kud/gandi-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">soap-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                macOS CLI to uninstall apps and scrub all their leftover files —
+                a thorough alternative to dragging to the bin.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/soap-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/soap-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">jenkins-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Fast Jenkins terminal companion — rich interactive TUI with
+                smart log highlighting and multi-server profiles.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/jenkins-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/jenkins-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">revu-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Interactive terminal diff reviewer — annotate diffs and export
+                reviews to Markdown.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/revu-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/revu-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">claude-dash-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Terminal dashboard for monitoring Claude Code sessions in real
+                time — built in Rust.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/claude-dash-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/claude-dash-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">claude-sessions-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                TUI session manager for Claude Code — browse, switch, and manage
+                your active sessions.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/claude-sessions-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/claude-sessions-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">models-dev-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Explore the models.dev catalogue from your terminal — fast
+                search, rich TUI, copy-to-clipboard.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/models-dev-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/models-dev-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">sonarqube-dash-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Fast, focused CLI &amp; TUI for SonarQube metrics, quality
+                gates, issues, and code snippets with branch awareness.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/sonarqube-dash-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/sonarqube-dash-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">sim-crafter-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Minimal simctl wrapper for quick iOS simulator setup and
+                management on macOS.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/sim-crafter-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/sim-crafter-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">xcode-versa-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Manage multiple Xcode versions on macOS — switch, install, and
+                clean up from the terminal.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/xcode-versa-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/xcode-versa-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name"
+                  >git-cherry-pick-interactive-cli</span
+                >
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Interactive way to cherry-pick commits from a specified branch —
+                select, preview, and apply with ease.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/git-cherry-pick-interactive-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/git-cherry-pick-interactive-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">wifi-tool-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Simple command line tool to manage WiFi settings on macOS —
+                connect, disconnect, and list networks.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/wifi-tool-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/wifi-tool-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="cli">
+              <div class="project-header">
+                <span class="project-name">am-i-admin-cli</span>
+                <span class="project-badge" data-cat="cli">cli</span>
+              </div>
+              <p class="project-desc">
+                Quickly determine whether you're an admin on your macOS computer
+                — simple, direct, no fluff.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/am-i-admin-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/am-i-admin-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <!-- AI -->
+            <div class="project-card" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">ai-conventional-commit-cli</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                AI-assisted, style-aware Conventional Commit generator and
+                splitter — learns your repo's commit style and produces polished
+                commits.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/ai-conventional-commit-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/ai-conventional-commit-cli"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">ai-feed-digest</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                AI-powered RSS feed aggregator that generates elegant daily
+                briefings in your language of choice.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://ai-feed-digest.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  >Live ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/ai-feed-digest"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">mcp-github-copilot</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                MCP server for GitHub Copilot — query any Copilot model from
+                Claude via the official Copilot SDK.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-github-copilot"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-github-copilot"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">mcp-opencode</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                MCP server for opencode — query any configured model via a
+                persistent opencode server from Claude.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-opencode"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-opencode"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="ai">
+              <div class="project-header">
+                <span class="project-name">claude-plugins</span>
+                <span class="project-badge" data-cat="ai">ai</span>
+              </div>
+              <p class="project-desc">
+                Curated collection of Claude Code plugins — a marketplace of MCP
+                servers packaged as installable Claude skills.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/claude-plugins"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/claude-plugins"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <!-- Development -->
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">mcp-jenkins</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Jenkins MCP server with 25+ tools for managing jobs, builds, and
+                CI/CD workflows from your AI assistant.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-jenkins"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-jenkins"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">mcp-harness-fme</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                MCP server for Harness FME — read and toggle feature flags from
+                your AI assistant.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-harness-fme"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-harness-fme"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">mcp-getstream-feeds</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                MCP server for GetStream Feeds — investigate push notification
+                delivery and subscription state from Claude.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-getstream-feeds"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-getstream-feeds"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">gh-pr-comments</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Browse GitHub PR review discussions from the terminal — navigate
+                threads and inline comments with ease.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/gh-pr-comments"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/gh-pr-comments"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">modern-cobalt2-vscode</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Modern take on the Cobalt2 colour scheme for VS Code — deep navy
+                blues, golden accents, and Cobalt2 syntax highlights.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://marketplace.visualstudio.com/items?itemName=kud.modern-cobalt2-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Marketplace ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/modern-cobalt2-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">november-vscode</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Dark VS Code theme with warm amber accents — a cosy alternative
+                to high-contrast dark themes.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/november-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/november-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">revu-vscode</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Annotate any line of code in VS Code and export your review to
+                Claude, Copilot, ChatGPT, or opencode in one click.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://marketplace.visualstudio.com/items?itemName=kud.revu-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Marketplace ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/revu-vscode"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="development">
+              <div class="project-header">
+                <span class="project-name">webextension-container-scheme</span>
+                <span class="project-badge" data-cat="development"
+                  >development</span
+                >
+              </div>
+              <p class="project-desc">
+                Firefox extension to open links in specific containers using a
+                custom protocol handler.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://addons.mozilla.org/firefox/addon/open-url-in-container/"
+                  target="_blank"
+                  rel="noopener"
+                  >Add-ons ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/webextension-container-scheme"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <!-- Productivity -->
+            <div class="project-card" data-cat="productivity">
+              <div class="project-header">
+                <span class="project-name">mcp-google-keep</span>
+                <span class="project-badge" data-cat="productivity"
+                  >productivity</span
+                >
+              </div>
+              <p class="project-desc">
+                MCP server for Google Keep — search, create, and manage notes
+                from Claude or any AI assistant.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-google-keep"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-google-keep"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="productivity">
+              <div class="project-header">
+                <span class="project-name">mcp-raindrop-io</span>
+                <span class="project-badge" data-cat="productivity"
+                  >productivity</span
+                >
+              </div>
+              <p class="project-desc">
+                MCP server for Raindrop.io — bookmarks, collections, tags, and
+                highlights from your AI assistant.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-raindrop-io"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-raindrop-io"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="productivity">
+              <div class="project-header">
+                <span class="project-name"
+                  >webextension-email-address-plus</span
+                >
+                <span class="project-badge" data-cat="productivity"
+                  >productivity</span
+                >
+              </div>
+              <p class="project-desc">
+                Firefox extension that generates a tagged email address based on
+                the current site's hostname — keep your inbox organised.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://addons.mozilla.org/en-US/firefox/addon/email-address-plus/"
+                  target="_blank"
+                  rel="noopener"
+                  >Add-ons ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/webextension-email-address-plus"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <!-- Entertainment -->
+            <div class="project-card" data-cat="entertainment">
+              <div class="project-header">
+                <span class="project-name">mcp-trakt</span>
+                <span class="project-badge" data-cat="entertainment"
+                  >entertainment</span
+                >
+              </div>
+              <p class="project-desc">
+                MCP server for Trakt — 36 tools for TV show and movie tracking,
+                sync, ratings, watchlists, and check-ins.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-trakt"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-trakt"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="entertainment">
+              <div class="project-header">
+                <span class="project-name">smart-tv-for-browser</span>
+                <span class="project-badge" data-cat="entertainment"
+                  >entertainment</span
+                >
+              </div>
+              <p class="project-desc">
+                Immersive, intelligent interface for watching television right
+                from your browser — a full smart TV experience on the web.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://smart-tv-for-browser.vercel.app"
+                  target="_blank"
+                  rel="noopener"
+                  >Live ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/smart-tv-for-browser"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="entertainment">
+              <div class="project-header">
+                <span class="project-name">webextension-youtube-embedify</span>
+                <span class="project-badge" data-cat="entertainment"
+                  >entertainment</span
+                >
+              </div>
+              <p class="project-desc">
+                Firefox extension that automatically converts YouTube video URLs
+                to embed URLs for easy sharing.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/webextension-youtube-embedify"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/webextension-youtube-embedify"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <div class="project-card" data-cat="entertainment">
+              <div class="project-header">
+                <span class="project-name">webextension-youtube-minimal</span>
+                <span class="project-badge" data-cat="entertainment"
+                  >entertainment</span
+                >
+              </div>
+              <p class="project-desc">
+                Minimalistic YouTube browser extension — strips away the clutter
+                and keeps you focused on the content.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/webextension-youtube-minimal"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/webextension-youtube-minimal"
+                  target="_blank"
+                  rel="noopener"
+                  >Source ↗</a
+                >
+              </div>
+            </div>
+
+            <!-- Data -->
+            <div class="project-card" data-cat="data">
+              <div class="project-header">
+                <span class="project-name">mcp-datadog</span>
+                <span class="project-badge" data-cat="data">data</span>
+              </div>
+              <p class="project-desc">
+                MCP server for Datadog — monitor metrics, incidents, and
+                dashboards from your AI assistant.
+              </p>
+              <div class="project-links">
+                <a
+                  class="project-link docs"
+                  href="https://kud.github.io/mcp-datadog"
+                  target="_blank"
+                  rel="noopener"
+                  >Docs ↗</a
+                >
+                <a
+                  class="project-link"
+                  href="https://github.com/kud/mcp-datadog"
                   target="_blank"
                   rel="noopener"
                   >Source ↗</a
@@ -163,6 +1085,22 @@
         nav.classList.toggle("scrolled", window.scrollY > 20)
       window.addEventListener("scroll", onScroll, { passive: true })
       onScroll()
+
+      document.querySelectorAll(".filter-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document
+            .querySelectorAll(".filter-tab")
+            .forEach((t) => t.classList.remove("active"))
+          tab.classList.add("active")
+          const filter = tab.dataset.filter
+          document.querySelectorAll(".project-card").forEach((card) => {
+            card.classList.toggle(
+              "hidden",
+              filter !== "all" && card.dataset.cat !== filter,
+            )
+          })
+        })
+      })
 
       const observer = new IntersectionObserver(
         (entries) =>
